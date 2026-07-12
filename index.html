@@ -15,7 +15,7 @@
             --accent-green: #10b981;
             --accent-blue: #3b82f6;
             --accent-purple: #8b5cf6;
-            --accent-warning: #f59e0b; /* Yellow/Orange color para sa warning */
+            --accent-warning: #f59e0b;
         }
 
         body {
@@ -23,271 +23,184 @@
             color: var(--text-main);
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             margin: 0;
-            padding: 20px;
+            padding: 10px; /* Pinaliit ang padding */
             display: flex;
             flex-direction: column;
             align-items: center;
             min-height: 100vh;
         }
 
+        /* NAVBAR TABS */
+        .nav-tabs {
+            display: flex;
+            width: 100%;
+            max-width: 400px;
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            border: 1px solid var(--card-border);
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+        .tab-btn {
+            flex: 1;
+            padding: 12px;
+            background: transparent;
+            border: none;
+            color: var(--text-muted);
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .tab-btn.active {
+            background-color: rgba(59, 130, 246, 0.15);
+            color: var(--accent-blue);
+            border-bottom: 3px solid var(--accent-blue);
+        }
+        .tab-content {
+            display: none;
+            width: 100%;
+            max-width: 400px;
+        }
+        .tab-content.active {
+            display: block;
+        }
+
         /* Top Header Container */
         .top-header {
             display: flex;
-            gap: 10px;
-            margin-bottom: 30px;
+            gap: 8px;
+            margin-bottom: 15px;
             flex-wrap: wrap;
             justify-content: center;
         }
-
         .badge-top {
             background-color: rgba(59, 130, 246, 0.05);
             border: 1px solid rgba(59, 130, 246, 0.2);
             color: var(--text-muted);
-            padding: 8px 16px;
+            padding: 6px 12px; /* Pinaliit */
             border-radius: 20px;
-            font-size: 0.75rem;
+            font-size: 0.7rem; /* Pinaliit */
             font-weight: 600;
-            letter-spacing: 0.5px;
             text-transform: uppercase;
             display: flex;
             align-items: center;
-            gap: 6px;
+            gap: 4px;
             text-decoration: none;
-            transition: all 0.2s ease;
         }
 
-        a.badge-top:hover {
-            background-color: rgba(139, 92, 246, 0.15);
-            border-color: rgba(139, 92, 246, 0.4);
-            color: var(--text-main);
-            transform: translateY(-1px);
-        }
-
-        .badge-top span.blue-text { color: var(--accent-blue); }
-        .badge-top span.purple-text { color: var(--accent-purple); }
-
-        /* General Card Styling */
+        /* General Card Styling (Mas Maliit) */
         .card {
             background-color: var(--card-bg);
             border: 1px solid var(--card-border);
-            border-radius: 16px;
+            border-radius: 14px;
             width: 100%;
-            max-width: 400px;
-            padding: 24px;
-            margin-bottom: 20px;
+            padding: 16px; /* Pinaliit mula 24px */
+            margin-bottom: 12px;
             box-sizing: border-box;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
 
         /* Main App Header */
         .app-header {
             display: flex;
             align-items: center;
-            gap: 16px;
-            margin-bottom: 24px;
+            gap: 12px;
+            margin-bottom: 16px;
         }
-
         .app-icon {
-            width: 72px;
-            height: 72px;
-            background-color: transparent;
-            border-radius: 16px;
+            width: 60px; /* Pinaliit mula 72px */
+            height: 60px;
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
             border: 1px solid var(--card-border);
             overflow: hidden;
         }
-        
-        .app-icon img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .app-title {
-            margin: 0 0 8px 0;
-            font-size: 1.25rem;
-            font-weight: 700;
-        }
-
-        .badges { display: flex; gap: 8px; }
-        .badge {
-            padding: 4px 10px;
-            border-radius: 6px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
+        .app-icon img { width: 100%; height: 100%; object-fit: cover; }
+        .app-title { margin: 0 0 4px 0; font-size: 1.1rem; font-weight: 700; }
+        .badges { display: flex; gap: 6px; }
+        .badge { padding: 3px 8px; border-radius: 6px; font-size: 0.65rem; font-weight: 600; display: flex; align-items: center; gap: 4px; }
         .badge-apk { background: rgba(16, 185, 129, 0.15); color: var(--accent-green); }
         .badge-ver { background: rgba(59, 130, 246, 0.15); color: var(--accent-blue); }
         .badge-size { background: rgba(148, 163, 184, 0.15); color: var(--text-muted); }
 
-        /* Security Banner */
-        .info-banner {
-            background: linear-gradient(to right, rgba(139, 92, 246, 0.1), rgba(59, 130, 246, 0.1));
-            border: 1px solid rgba(139, 92, 246, 0.2);
-            border-radius: 12px;
-            padding: 16px;
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            margin-bottom: 16px;
+        /* Fake Ratings Section */
+        .rating-header { margin: 0 0 10px 0; font-size: 1rem; font-weight: 600; }
+        .rating-flex { display: flex; align-items: center; gap: 16px; }
+        .score-big { font-size: 3rem; font-weight: 700; line-height: 1; }
+        .stars-container { display: flex; flex-direction: column; gap: 4px; }
+        .stars i { color: var(--accent-blue); font-size: 0.9rem; }
+        .stars i.dim { color: var(--card-border); }
+        .rating-stats { font-size: 0.75rem; color: var(--text-muted); }
+        .install-badge {
+            background: rgba(16, 185, 129, 0.1);
+            color: var(--accent-green);
+            padding: 4px 10px;
+            border-radius: 8px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 10px;
+            border: 1px solid rgba(16, 185, 129, 0.2);
         }
-        .info-banner i { color: var(--accent-purple); font-size: 1.5rem; }
-        .info-text-sm { font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; margin: 0 0 4px 0; }
-        .info-text-lg { font-size: 1rem; font-weight: 600; margin: 0; color: var(--text-main); }
 
         /* Download Button */
         .btn-download {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 12px;
+            gap: 10px;
             width: 100%;
             background: linear-gradient(135deg, #10b981, #059669);
             color: white;
-            padding: 16px;
-            border-radius: 12px;
+            padding: 12px; /* Pinaliit */
+            border-radius: 10px;
             text-decoration: none;
             border: none;
             cursor: pointer;
-            transition: transform 0.2s, box-shadow 0.2s;
             box-sizing: border-box;
         }
-        .btn-download:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3); }
-        .btn-download-texts { display: flex; flex-direction: column; align-items: flex-start; }
-        .btn-main-text { font-weight: 700; font-size: 1.1rem; }
-        .btn-sub-text { font-size: 0.75rem; opacity: 0.9; }
-        .btn-download i { font-size: 1.8rem; }
+        .btn-main-text { font-weight: 700; font-size: 1rem; }
+        .btn-sub-text { font-size: 0.7rem; opacity: 0.9; }
 
-        /* ---------- INSTALLATION WARNING CARD ---------- */
-        .warning-card {
-            border-color: rgba(245, 158, 11, 0.3);
-            background: linear-gradient(to bottom right, var(--card-bg), rgba(245, 158, 11, 0.05));
-            padding: 20px;
-        }
-        .warning-header {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            color: var(--accent-warning);
-            margin-bottom: 10px;
-        }
-        .warning-header h3 {
-            margin: 0;
-            font-size: 1.05rem;
-        }
-        .warning-text {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            line-height: 1.5;
-            margin: 0 0 16px 0;
-        }
-        .warning-text strong {
-            color: #cbd5e1;
-        }
-        .btn-video {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            width: 100%;
-            background-color: rgba(245, 158, 11, 0.15);
-            color: var(--accent-warning);
-            padding: 12px;
-            border-radius: 10px;
-            border: 1px solid rgba(245, 158, 11, 0.3);
-            font-size: 0.9rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-        .btn-video:hover {
-            background-color: rgba(245, 158, 11, 0.25);
-            transform: translateY(-2px);
-        }
+        /* Website Card */
+        .web-card-title { display: flex; align-items: center; gap: 10px; color: var(--accent-blue); font-size: 1.1rem; margin-bottom: 10px; }
+        .web-link { display: block; color: var(--text-main); text-decoration: none; background: #0f172a; padding: 12px; border-radius: 8px; border: 1px solid var(--card-border); margin-bottom: 10px; word-break: break-all; font-size: 0.85rem;}
+        .web-link:hover { border-color: var(--accent-blue); }
+        .web-stats { display: flex; align-items: center; gap: 6px; color: var(--accent-green); font-size: 0.8rem; font-weight: 600;}
 
-        /* SCREENSHOT GALLERY SECTION */
-        .gallery-title { font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; font-weight: 600; }
-        .gallery-scroll-container { display: flex; gap: 12px; overflow-x: auto; padding-bottom: 8px; scroll-snap-type: x mandatory; scrollbar-width: thin; scrollbar-color: var(--card-border) transparent; }
-        .gallery-scroll-container::-webkit-scrollbar { height: 5px; }
-        .gallery-scroll-container::-webkit-scrollbar-thumb { background-color: var(--card-border); border-radius: 10px; }
-        .gallery-item { flex: 0 0 auto; width: 140px; height: 250px; background-color: #0b1120; border-radius: 10px; border: 1px solid var(--card-border); overflow: hidden; scroll-snap-align: start; }
-        .gallery-item img { width: 100%; height: 100%; object-fit: cover; cursor: pointer; transition: opacity 0.2s; }
-        .gallery-item img:hover { opacity: 0.8; }
-
-        /* LIGHTBOX MODALS (Para sa Image at Video) */
-        .modal {
-            display: none; 
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.9);
-            backdrop-filter: blur(5px);
-        }
+        /* Comments Section */
+        .comment-box { display: flex; flex-direction: column; gap: 10px; margin-top: 15px; }
+        .comment-input { width: 100%; background: #0f172a; border: 1px solid var(--card-border); color: white; padding: 10px; border-radius: 8px; resize: none; font-family: inherit; font-size: 0.85rem; box-sizing: border-box; }
+        .btn-post { background: var(--accent-blue); color: white; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-weight: 600; align-self: flex-end; font-size: 0.8rem;}
         
-        /* Modal for Image */
-        .modal-image-content {
-            margin: auto;
-            display: block;
-            width: 85%;
-            max-width: 450px;
-            border-radius: 16px;
-            margin-top: 60px;
-            animation: zoomIn 0.3s;
-        }
+        .comment-list { margin-top: 15px; display: flex; flex-direction: column; gap: 12px; }
+        .comment-item { display: flex; gap: 10px; }
+        .avatar { width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.8rem; color: white; flex-shrink: 0; }
+        .comment-content { background: #0f172a; padding: 10px; border-radius: 8px; border: 1px solid var(--card-border); flex-grow: 1; }
+        .comment-name { font-weight: 600; font-size: 0.8rem; margin: 0 0 4px 0; color: var(--accent-blue); }
+        .comment-text { font-size: 0.85rem; margin: 0; color: var(--text-main); }
+        .comment-actions { margin-top: 6px; display: flex; gap: 10px; }
+        .btn-reply { background: transparent; border: none; color: var(--text-muted); font-size: 0.75rem; cursor: pointer; padding: 0; }
+        .btn-reply:hover { color: var(--accent-blue); }
+        .replies { margin-top: 8px; padding-left: 15px; border-left: 2px solid var(--card-border); display: flex; flex-direction: column; gap: 8px;}
 
-        /* Modal for Video */
-        .video-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100%;
-            width: 100%;
-        }
-        .video-container video {
-            width: 85%;
-            max-width: 400px;
-            border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            animation: zoomIn 0.3s;
-            outline: none;
-        }
-
-        @keyframes zoomIn {
-            from {transform: scale(0.8); opacity: 0;}
-            to {transform: scale(1); opacity: 1;}
-        }
-
-        .close-modal {
-            position: absolute;
-            top: 20px;
-            right: 30px;
-            color: #f1f1f1;
-            font-size: 40px;
-            font-weight: bold;
-            transition: 0.3s;
-            cursor: pointer;
-            z-index: 1001;
-        }
-        .close-modal:hover { color: var(--accent-blue); text-decoration: none; }
+        /* Gallery */
+        .gallery-title { font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; margin-bottom: 10px; font-weight: 600; }
+        .gallery-scroll-container { display: flex; gap: 10px; overflow-x: auto; padding-bottom: 8px; scroll-snap-type: x mandatory; scrollbar-width: thin; scrollbar-color: var(--card-border) transparent; }
+        .gallery-item { flex: 0 0 auto; width: 110px; height: 200px; background-color: #0b1120; border-radius: 8px; border: 1px solid var(--card-border); overflow: hidden; scroll-snap-align: start; }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; cursor: pointer; }
 
         /* Stats Card */
-        .stats-header { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
-        .stats-icon { background-color: var(--accent-blue); width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: white; }
-        .stats-title { margin: 0; font-size: 1.1rem; }
-        .stats-subtitle { margin: 0; font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; }
-        .stat-row { background-color: #0f172a; border: 1px solid var(--card-border); border-radius: 10px; padding: 16px; margin-bottom: 12px; }
+        .stats-header { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+        .stats-icon { background-color: var(--accent-blue); width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-size: 0.9rem;}
+        .stats-title { margin: 0; font-size: 1rem; }
+        .stat-row { background-color: #0f172a; border: 1px solid var(--card-border); border-radius: 8px; padding: 12px; margin-bottom: 8px; }
         .stat-row:last-child { margin-bottom: 0; }
-        .stat-label { display: flex; align-items: center; gap: 8px; font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; margin-bottom: 8px; }
-        .stat-value { font-size: 1rem; font-weight: 600; margin: 0; }
-
+        .stat-label { display: flex; align-items: center; gap: 6px; font-size: 0.65rem; color: var(--text-muted); text-transform: uppercase; margin-bottom: 4px; }
+        .stat-value { font-size: 0.9rem; font-weight: 600; margin: 0; }
     </style>
 </head>
 <body>
@@ -301,160 +214,242 @@
         </a>
     </div>
 
-    <div class="card">
-        <div class="app-header">
-            <div class="app-icon">
-                <img src="images/app-logo.png" alt="Customs Tech Logo">
-            </div>
-            <div>
-                <h1 class="app-title">RA 10863 CMTA</h1>
-                <div class="badges">
-                    <span class="badge badge-apk"><i class="fa-brands fa-android"></i> APK</span>
-                    <span class="badge badge-ver"><i class="fa-solid fa-code-branch"></i> v1.0</span>
-                    <span class="badge badge-size"><i class="fa-solid fa-hard-drive"></i> 8.64 MB</span>
+    <div class="nav-tabs">
+        <button class="tab-btn active" onclick="switchTab('app')"><i class="fa-brands fa-android"></i> APK App</button>
+        <button class="tab-btn" onclick="switchTab('website')"><i class="fa-solid fa-globe"></i> Website</button>
+    </div>
+
+    <div id="tab-app" class="tab-content active">
+        <div class="card">
+            <div class="app-header">
+                <div class="app-icon">
+                    <img src="images/app-logo.png" alt="Customs Tech Logo">
+                </div>
+                <div>
+                    <h1 class="app-title">RA 10863 CMTA</h1>
+                    <div class="badges">
+                        <span class="badge badge-apk"><i class="fa-brands fa-android"></i> APK</span>
+                        <span class="badge badge-ver"><i class="fa-solid fa-code-branch"></i> v1.0</span>
+                        <span class="badge badge-size"><i class="fa-solid fa-hard-drive"></i> 8.64 MB</span>
+                    </div>
                 </div>
             </div>
+
+            <a href="downloads/app-debug__3_.apk" class="btn-download" download>
+                <i class="fa-brands fa-android" style="font-size: 1.5rem;"></i>
+                <div style="display: flex; flex-direction: column; align-items: flex-start;">
+                    <span class="btn-main-text">Download APK</span>
+                    <span class="btn-sub-text">For Android Devices</span>
+                </div>
+            </a>
         </div>
 
-        <div class="info-banner">
-            <i class="fa-solid fa-shield-halved"></i>
-            <div>
-                <p class="info-text-sm">Security Status</p>
-                <p class="info-text-lg">Verified & Safe</p>
+        <div class="card">
+            <h2 class="rating-header">Ratings and reviews</h2>
+            <div class="rating-flex">
+                <div class="score-big">4.5</div>
+                <div class="stars-container">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <div class="rating-stats">8,439 ratings</div>
+                </div>
+            </div>
+            <div class="install-badge">
+                <i class="fa-solid fa-download"></i> 10K+ Installs
             </div>
         </div>
 
-        <a href="downloads/app-debug__3_.apk" class="btn-download" download>
-            <i class="fa-brands fa-android"></i>
-            <div class="btn-download-texts">
-                <span class="btn-main-text">Download APK</span>
-                <span class="btn-sub-text">For Android Devices</span>
-            </div>
-        </a>
-    </div>
-
-    <div class="card warning-card">
-        <div class="warning-header">
-            <i class="fa-solid fa-triangle-exclamation"></i>
-            <h3>Installation Blocked?</h3>
-        </div>
-        <p class="warning-text">
-            Dahil wala pa ang app na ito sa Google Play Store, maaaring i-block ng <strong>Google Play Protect</strong> ang iyong installation. Huwag mag-alala, safe ang app na ito! Panoorin kung paano i-bypass.
-        </p>
-        <button class="btn-video" id="openVideoBtn">
-            <i class="fa-solid fa-circle-play"></i> Watch Installation Guide
-        </button>
-    </div>
-
-    <div class="card">
-        <div class="gallery-title"><i class="fa-regular fa-images"></i> Preview Gallery</div>
-        <div class="gallery-scroll-container">
-            <div class="gallery-item">
-                <img src="images/trusted_by_legal_pros.png" alt="Trusted by Legal Pros Screenshot" class="zoomable-image">
-            </div>
-            <div class="gallery-item">
-                <img src="images/read___annotate_easily.png" alt="Read and Annotate Screenshot" class="zoomable-image">
-            </div>
-            <div class="gallery-item">
-                <img src="images/find_laws_instantly.png" alt="Find Laws Instantly Screenshot" class="zoomable-image">
+        <div class="card">
+            <div class="gallery-title"><i class="fa-regular fa-images"></i> Preview Gallery</div>
+            <div class="gallery-scroll-container">
+                <div class="gallery-item"><img src="images/trusted_by_legal_pros.png" alt="Screenshot"></div>
+                <div class="gallery-item"><img src="images/read___annotate_easily.png" alt="Screenshot"></div>
+                <div class="gallery-item"><img src="images/find_laws_instantly.png" alt="Screenshot"></div>
             </div>
         </div>
-    </div>
 
-    <div class="card">
-        <div class="stats-header">
-            <div class="stats-icon">
-                <i class="fa-solid fa-chart-line"></i>
-            </div>
-            <div>
+        <div class="card">
+            <div class="stats-header">
+                <div class="stats-icon"><i class="fa-solid fa-chart-line"></i></div>
                 <h2 class="stats-title">App Overview</h2>
-                <p class="stats-subtitle">Quick Stats</p>
+            </div>
+            <div class="stat-row">
+                <div class="stat-label"><i class="fa-solid fa-hashtag"></i> Version</div>
+                <p class="stat-value">v1.0 (1)</p>
+            </div>
+            <div class="stat-row">
+                <div class="stat-label"><i class="fa-regular fa-calendar"></i> Uploaded</div>
+                <p class="stat-value">Jul 12, 2026</p>
             </div>
         </div>
-        <div class="stat-row">
-            <div class="stat-label"><i class="fa-solid fa-box"></i> App Name</div>
-            <p class="stat-value">RA 10863 CMTA (Customs Tech)</p>
-        </div>
-        <div class="stat-row">
-            <div class="stat-label"><i class="fa-solid fa-hashtag"></i> Version</div>
-            <p class="stat-value">v1.0 (1)</p>
-        </div>
-        <div class="stat-row">
-            <div class="stat-label"><i class="fa-solid fa-microchip"></i> Size</div>
-            <p class="stat-value">8.64 MB</p>
-        </div>
-        <div class="stat-row">
-            <div class="stat-label"><i class="fa-regular fa-calendar"></i> Uploaded</div>
-            <p class="stat-value">Jul 12, 2026, 08:09 PM</p>
+
+        <div class="card">
+            <h2 class="rating-header">User Comments & Suggestions</h2>
+            
+            <div class="comment-box">
+                <textarea id="main-comment" class="comment-input" rows="3" placeholder="Leave a review or suggestion..."></textarea>
+                <button class="btn-post" onclick="postComment(null)">Post Comment</button>
+            </div>
+
+            <div class="comment-list" id="comments-container">
+                </div>
         </div>
     </div>
 
-    <div id="imageModal" class="modal">
-        <span class="close-modal" id="closeImageModal">&times;</span>
-        <img class="modal-image-content" id="expandedImg">
-    </div>
+    <div id="tab-website" class="tab-content">
+        <div class="card">
+            <h2 class="web-card-title"><i class="fa-solid fa-globe"></i> Web Version Available</h2>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0;">Access the Customs Tech laws directly from your browser without installing.</p>
+            
+            <a href="https://ra10863bycustomstech-osias-org.onrender.com/" target="_blank" class="web-link">
+                <i class="fa-solid fa-link" style="color: var(--accent-blue);"></i> ra10863bycustomstech-osias-org.onrender.com
+            </a>
 
-    <div id="videoModal" class="modal">
-        <span class="close-modal" id="closeVideoModal">&times;</span>
-        <div class="video-container">
-            <video id="tutorialVideo" controls>
-                <source src="videos/install-guide.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+            <div class="web-stats">
+                <i class="fa-solid fa-fire"></i> 3K+ people open every day
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2 class="rating-header">Why use the Web Version?</h2>
+            <div class="stat-row">
+                <div class="stat-label"><i class="fa-solid fa-bolt"></i> Fast</div>
+                <p class="stat-value">Instant access, no download required.</p>
+            </div>
+            <div class="stat-row">
+                <div class="stat-label"><i class="fa-solid fa-display"></i> Cross-Platform</div>
+                <p class="stat-value">Works on iOS, Android, Mac, and Windows.</p>
+            </div>
         </div>
     </div>
 
     <script>
-        // --- IMAGE MODAL LOGIC ---
-        var imageModal = document.getElementById("imageModal");
-        var modalImg = document.getElementById("expandedImg");
-        var images = document.querySelectorAll(".zoomable-image");
-        var closeImageBtn = document.getElementById("closeImageModal");
+        // TAB SWITCHING LOGIC
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+            
+            event.currentTarget.classList.add('active');
+            document.getElementById('tab-' + tabId).classList.add('active');
+        }
 
-        images.forEach(function(img) {
-            img.onclick = function(){
-                imageModal.style.display = "block";
-                modalImg.src = this.src; 
+        // COMMENT SYSTEM LOGIC
+        // Note: Gumagamit ito ng localStorage. Mag-sa-save ito sa browser ng user.
+        
+        // Random Generator para sa pangalan at kulay
+        function generateRandomUser() {
+            let userStr = Math.random().toString(36).substring(2, 6).toUpperCase();
+            let num = Math.floor(Math.random() * 999) + 100;
+            return "User_" + userStr + num;
+        }
+
+        function getRandomColor() {
+            const colors = ['#f59e0b', '#10b981', '#3b82f6', '#8b5cf6', '#ef4444', '#ec4899', '#14b8a6'];
+            return colors[Math.floor(Math.random() * colors.length)];
+        }
+
+        // Kunin o i-set ang identity ng user na nagba-browse ngayon
+        let currentUser = localStorage.getItem('my_random_user');
+        let currentColor = localStorage.getItem('my_random_color');
+        
+        if (!currentUser) {
+            currentUser = generateRandomUser();
+            currentColor = getRandomColor();
+            localStorage.setItem('my_random_user', currentUser);
+            localStorage.setItem('my_random_color', currentColor);
+        }
+
+        // Load comments mula sa storage
+        let comments = JSON.parse(localStorage.getItem('app_comments')) || [
+            { id: 1, name: "User_B4X912", color: "#3b82f6", text: "Napakaganda ng app! Laking tulong sa pag-aaral ng CMTA.", replies: [] },
+            { id: 2, name: "User_Z9L104", color: "#10b981", text: "Sana magkaroon ng dark mode sa susunod na update.", replies: [] }
+        ];
+
+        function saveComments() {
+            localStorage.setItem('app_comments', JSON.stringify(comments));
+        }
+
+        function renderComments() {
+            const container = document.getElementById('comments-container');
+            container.innerHTML = '';
+
+            comments.slice().reverse().forEach(comment => {
+                let initial = comment.name.replace('User_', '').charAt(0);
+                
+                let html = `
+                <div class="comment-item">
+                    <div class="avatar" style="background-color: ${comment.color}">${initial}</div>
+                    <div class="comment-content">
+                        <p class="comment-name">${comment.name}</p>
+                        <p class="comment-text">${comment.text}</p>
+                        <div class="comment-actions">
+                            <button class="btn-reply" onclick="toggleReplyBox(${comment.id})"><i class="fa-solid fa-reply"></i> Reply</button>
+                        </div>
+                        
+                        <div id="reply-box-${comment.id}" class="comment-box" style="display:none; margin-top:10px;">
+                            <textarea id="reply-input-${comment.id}" class="comment-input" rows="2" placeholder="Write a reply..."></textarea>
+                            <button class="btn-post" onclick="postComment(${comment.id})">Post Reply</button>
+                        </div>
+
+                        <div class="replies">
+                            ${comment.replies.map(reply => `
+                                <div class="comment-item" style="margin-top: 8px;">
+                                    <div class="avatar" style="background-color: ${reply.color}; width: 24px; height: 24px; font-size: 0.6rem;">${reply.name.replace('User_', '').charAt(0)}</div>
+                                    <div>
+                                        <p class="comment-name" style="font-size: 0.75rem;">${reply.name}</p>
+                                        <p class="comment-text" style="font-size: 0.8rem;">${reply.text}</p>
+                                    </div>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                </div>`;
+                container.innerHTML += html;
+            });
+        }
+
+        function toggleReplyBox(commentId) {
+            let box = document.getElementById(`reply-box-${commentId}`);
+            box.style.display = box.style.display === 'none' ? 'flex' : 'none';
+        }
+
+        function postComment(parentId) {
+            let inputField = parentId ? document.getElementById(`reply-input-${parentId}`) : document.getElementById('main-comment');
+            let text = inputField.value.trim();
+            
+            if (text === '') return;
+
+            if (parentId) {
+                // Find parent and push reply
+                let parentComment = comments.find(c => c.id === parentId);
+                parentComment.replies.push({
+                    name: currentUser,
+                    color: currentColor,
+                    text: text
+                });
+            } else {
+                // New main comment
+                comments.push({
+                    id: Date.now(),
+                    name: currentUser,
+                    color: currentColor,
+                    text: text,
+                    replies: []
+                });
             }
-        });
 
-        closeImageBtn.onclick = function() {
-            imageModal.style.display = "none";
+            inputField.value = '';
+            saveComments();
+            renderComments();
         }
 
-        imageModal.onclick = function(event) {
-            if (event.target !== modalImg) {
-                imageModal.style.display = "none";
-            }
-        }
-
-        // --- VIDEO MODAL LOGIC ---
-        var videoModal = document.getElementById("videoModal");
-        var openVideoBtn = document.getElementById("openVideoBtn");
-        var closeVideoBtn = document.getElementById("closeVideoModal");
-        var tutorialVideo = document.getElementById("tutorialVideo");
-
-        // Kapag kinlik ang "Watch Installation Guide"
-        openVideoBtn.onclick = function() {
-            videoModal.style.display = "block";
-            tutorialVideo.play(); // Mag-o-auto play pagka-open
-        }
-
-        // Kapag kinlik ang "X" button sa video
-        closeVideoBtn.onclick = function() {
-            videoModal.style.display = "none";
-            tutorialVideo.pause(); // I-pause ang video pag sinara
-            tutorialVideo.currentTime = 0; // Ibalik sa simula
-        }
-
-        // Kapag kinlik ang background sa labas ng video
-        videoModal.onclick = function(event) {
-            if (event.target === videoModal || event.target === document.querySelector('.video-container')) {
-                videoModal.style.display = "none";
-                tutorialVideo.pause();
-                tutorialVideo.currentTime = 0;
-            }
-        }
+        // Render pagka-load ng page
+        renderComments();
     </script>
 
 </body>
