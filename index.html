@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download RA 10863 CMTA</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --card-border: #334155;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent-green: #10b981;
+            --accent-blue: #3b82f6;
+            --accent-purple: #8b5cf6;
+            --accent-warning: #f59e0b; /* Yellow/Orange color para sa warning */
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Top Header Container */
+        .top-header {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .badge-top {
+            background-color: rgba(59, 130, 246, 0.05);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            color: var(--text-muted);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        a.badge-top:hover {
+            background-color: rgba(139, 92, 246, 0.15);
+            border-color: rgba(139, 92, 246, 0.4);
+            color: var(--text-main);
+            transform: translateY(-1px);
+        }
+
+        .badge-top span.blue-text { color: var(--accent-blue); }
+        .badge-top span.purple-text { color: var(--accent-purple); }
+
+        /* General Card Styling */
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            width: 100%;
+            max-width: 400px;
+            padding: 24px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        /* Main App Header */
+        .app-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .app-icon {
+            width: 72px;
+            height: 72px;
+            background-color: transparent;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--card-border);
+            overflow: hidden;
+        }
+        
+        .app-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .app-title {
+            margin: 0 0 8px 0;
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+
+        .badges { display: flex; gap: 8px; }
+        .badge {
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .badge-apk { background: rgba(16, 185, 129, 0.15); color: var(--accent-green); }
+        .badge-ver { background: rgba(59, 130, 246, 0.15); color: var(--accent-blue); }
+        .badge-size { background: rgba(148, 163, 184, 0.15); color: var(--text-muted); }
+
+        /* Security Banner */
+        .info-banner {
+            background: linear-gradient(to right, rgba(139, 92, 246, 0.1), rgba(59, 130, 246, 0.1));
+            border: 1px solid rgba(139, 92, 246, 0.2);
+            border-radius: 12px;
+            padding: 16px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+        .info-banner i { color: var(--accent-purple); font-size: 1.5rem; }
+        .info-text-sm { font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; margin: 0 0 4px 0; }
+        .info-text-lg { font-size: 1rem; font-weight: 600; margin: 0; color: var(--text-main); }
+
+        /* Download Button */
+        .btn-download {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            width: 100%;
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white;
+            padding: 16px;
+            border-radius: 12px;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-sizing: border-box;
+        }
+        .btn-download:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3); }
+        .btn-download-texts { display: flex; flex-direction: column; align-items: flex-start; }
+        .btn-main-text { font-weight: 700; font-size: 1.1rem; }
+        .btn-sub-text { font-size: 0.75rem; opacity: 0.9; }
+        .btn-download i { font-size: 1.8rem; }
+
+        /* ---------- INSTALLATION WARNING CARD ---------- */
+        .warning-card {
+            border-color: rgba(245, 158, 11, 0.3);
+            background: linear-gradient(to bottom right, var(--card-bg), rgba(245, 158, 11, 0.05));
+            padding: 20px;
+        }
+        .warning-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--accent-warning);
+            margin-bottom: 10px;
+        }
+        .warning-header h3 {
+            margin: 0;
+            font-size: 1.05rem;
+        }
+        .warning-text {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+            margin: 0 0 16px 0;
+        }
+        .warning-text strong {
+            color: #cbd5e1;
+        }
+        .btn-video {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            background-color: rgba(245, 158, 11, 0.15);
+            color: var(--accent-warning);
+            padding: 12px;
+            border-radius: 10px;
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .btn-video:hover {
+            background-color: rgba(245, 158, 11, 0.25);
+            transform: translateY(-2px);
+        }
+
+        /* SCREENSHOT GALLERY SECTION */
+        .gallery-title { font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; font-weight: 600; }
+        .gallery-scroll-container { display: flex; gap: 12px; overflow-x: auto; padding-bottom: 8px; scroll-snap-type: x mandatory; scrollbar-width: thin; scrollbar-color: var(--card-border) transparent; }
+        .gallery-scroll-container::-webkit-scrollbar { height: 5px; }
+        .gallery-scroll-container::-webkit-scrollbar-thumb { background-color: var(--card-border); border-radius: 10px; }
+        .gallery-item { flex: 0 0 auto; width: 140px; height: 250px; background-color: #0b1120; border-radius: 10px; border: 1px solid var(--card-border); overflow: hidden; scroll-snap-align: start; }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; cursor: pointer; transition: opacity 0.2s; }
+        .gallery-item img:hover { opacity: 0.8; }
+
+        /* LIGHTBOX MODALS (Para sa Image at Video) */
+        .modal {
+            display: none; 
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(5px);
+        }
+        
+        /* Modal for Image */
+        .modal-image-content {
+            margin: auto;
+            display: block;
+            width: 85%;
+            max-width: 450px;
+            border-radius: 16px;
+            margin-top: 60px;
+            animation: zoomIn 0.3s;
+        }
+
+        /* Modal for Video */
+        .video-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+        }
+        .video-container video {
+            width: 85%;
+            max-width: 400px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            animation: zoomIn 0.3s;
+            outline: none;
+        }
+
+        @keyframes zoomIn {
+            from {transform: scale(0.8); opacity: 0;}
+            to {transform: scale(1); opacity: 1;}
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+            z-index: 1001;
+        }
+        .close-modal:hover { color: var(--accent-blue); text-decoration: none; }
+
+        /* Stats Card */
+        .stats-header { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+        .stats-icon { background-color: var(--accent-blue); width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: white; }
+        .stats-title { margin: 0; font-size: 1.1rem; }
+        .stats-subtitle { margin: 0; font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; }
+        .stat-row { background-color: #0f172a; border: 1px solid var(--card-border); border-radius: 10px; padding: 16px; margin-bottom: 12px; }
+        .stat-row:last-child { margin-bottom: 0; }
+        .stat-label { display: flex; align-items: center; gap: 8px; font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; margin-bottom: 8px; }
+        .stat-value { font-size: 1rem; font-weight: 600; margin: 0; }
+
+    </style>
+</head>
+<body>
+
+    <div class="top-header">
+        <div class="badge-top">
+            <i class="fa-solid fa-server"></i> Hosted on <span class="blue-text">&nbsp;GitHub Pages</span>
+        </div>
+        <a href="https://osiasnalaunan68-star.github.io/osias-personal-portfolio" target="_blank" class="badge-top">
+            <i class="fa-solid fa-code"></i> Developer: <span class="purple-text">&nbsp;Osias</span>
+        </a>
+    </div>
+
+    <div class="card">
+        <div class="app-header">
+            <div class="app-icon">
+                <img src="images/app-logo.png" alt="Customs Tech Logo">
+            </div>
+            <div>
+                <h1 class="app-title">RA 10863 CMTA</h1>
+                <div class="badges">
+                    <span class="badge badge-apk"><i class="fa-brands fa-android"></i> APK</span>
+                    <span class="badge badge-ver"><i class="fa-solid fa-code-branch"></i> v1.0</span>
+                    <span class="badge badge-size"><i class="fa-solid fa-hard-drive"></i> 8.64 MB</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-banner">
+            <i class="fa-solid fa-shield-halved"></i>
+            <div>
+                <p class="info-text-sm">Security Status</p>
+                <p class="info-text-lg">Verified & Safe</p>
+            </div>
+        </div>
+
+        <a href="downloads/app-debug__3_.apk" class="btn-download" download>
+            <i class="fa-brands fa-android"></i>
+            <div class="btn-download-texts">
+                <span class="btn-main-text">Download APK</span>
+                <span class="btn-sub-text">For Android Devices</span>
+            </div>
+        </a>
+    </div>
+
+    <div class="card warning-card">
+        <div class="warning-header">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+            <h3>Installation Blocked?</h3>
+        </div>
+        <p class="warning-text">
+            Dahil wala pa ang app na ito sa Google Play Store, maaaring i-block ng <strong>Google Play Protect</strong> ang iyong installation. Huwag mag-alala, safe ang app na ito! Panoorin kung paano i-bypass.
+        </p>
+        <button class="btn-video" id="openVideoBtn">
+            <i class="fa-solid fa-circle-play"></i> Watch Installation Guide
+        </button>
+    </div>
+
+    <div class="card">
+        <div class="gallery-title"><i class="fa-regular fa-images"></i> Preview Gallery</div>
+        <div class="gallery-scroll-container">
+            <div class="gallery-item">
+                <img src="images/trusted_by_legal_pros.png" alt="Trusted by Legal Pros Screenshot" class="zoomable-image">
+            </div>
+            <div class="gallery-item">
+                <img src="images/read___annotate_easily.png" alt="Read and Annotate Screenshot" class="zoomable-image">
+            </div>
+            <div class="gallery-item">
+                <img src="images/find_laws_instantly.png" alt="Find Laws Instantly Screenshot" class="zoomable-image">
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="stats-header">
+            <div class="stats-icon">
+                <i class="fa-solid fa-chart-line"></i>
+            </div>
+            <div>
+                <h2 class="stats-title">App Overview</h2>
+                <p class="stats-subtitle">Quick Stats</p>
+            </div>
+        </div>
+        <div class="stat-row">
+            <div class="stat-label"><i class="fa-solid fa-box"></i> App Name</div>
+            <p class="stat-value">RA 10863 CMTA (Customs Tech)</p>
+        </div>
+        <div class="stat-row">
+            <div class="stat-label"><i class="fa-solid fa-hashtag"></i> Version</div>
+            <p class="stat-value">v1.0 (1)</p>
+        </div>
+        <div class="stat-row">
+            <div class="stat-label"><i class="fa-solid fa-microchip"></i> Size</div>
+            <p class="stat-value">8.64 MB</p>
+        </div>
+        <div class="stat-row">
+            <div class="stat-label"><i class="fa-regular fa-calendar"></i> Uploaded</div>
+            <p class="stat-value">Jul 12, 2026, 08:09 PM</p>
+        </div>
+    </div>
+
+    <div id="imageModal" class="modal">
+        <span class="close-modal" id="closeImageModal">&times;</span>
+        <img class="modal-image-content" id="expandedImg">
+    </div>
+
+    <div id="videoModal" class="modal">
+        <span class="close-modal" id="closeVideoModal">&times;</span>
+        <div class="video-container">
+            <video id="tutorialVideo" controls>
+                <source src="videos/install-guide.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <script>
+        // --- IMAGE MODAL LOGIC ---
+        var imageModal = document.getElementById("imageModal");
+        var modalImg = document.getElementById("expandedImg");
+        var images = document.querySelectorAll(".zoomable-image");
+        var closeImageBtn = document.getElementById("closeImageModal");
+
+        images.forEach(function(img) {
+            img.onclick = function(){
+                imageModal.style.display = "block";
+                modalImg.src = this.src; 
+            }
+        });
+
+        closeImageBtn.onclick = function() {
+            imageModal.style.display = "none";
+        }
+
+        imageModal.onclick = function(event) {
+            if (event.target !== modalImg) {
+                imageModal.style.display = "none";
+            }
+        }
+
+        // --- VIDEO MODAL LOGIC ---
+        var videoModal = document.getElementById("videoModal");
+        var openVideoBtn = document.getElementById("openVideoBtn");
+        var closeVideoBtn = document.getElementById("closeVideoModal");
+        var tutorialVideo = document.getElementById("tutorialVideo");
+
+        // Kapag kinlik ang "Watch Installation Guide"
+        openVideoBtn.onclick = function() {
+            videoModal.style.display = "block";
+            tutorialVideo.play(); // Mag-o-auto play pagka-open
+        }
+
+        // Kapag kinlik ang "X" button sa video
+        closeVideoBtn.onclick = function() {
+            videoModal.style.display = "none";
+            tutorialVideo.pause(); // I-pause ang video pag sinara
+            tutorialVideo.currentTime = 0; // Ibalik sa simula
+        }
+
+        // Kapag kinlik ang background sa labas ng video
+        videoModal.onclick = function(event) {
+            if (event.target === videoModal || event.target === document.querySelector('.video-container')) {
+                videoModal.style.display = "none";
+                tutorialVideo.pause();
+                tutorialVideo.currentTime = 0;
+            }
+        }
+    </script>
+
+</body>
+</html>
