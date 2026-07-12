@@ -17,20 +17,17 @@
             --accent-purple: #8b5cf6;
             --accent-warning: #f59e0b;
         }
-
         body {
             background-color: var(--bg-color);
             color: var(--text-main);
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             margin: 0;
-            padding: 10px; /* Pinaliit ang padding */
+            padding: 10px;
             display: flex;
             flex-direction: column;
             align-items: center;
             min-height: 100vh;
         }
-
-        /* NAVBAR TABS */
         .nav-tabs {
             display: flex;
             width: 100%;
@@ -65,8 +62,6 @@
         .tab-content.active {
             display: block;
         }
-
-        /* Top Header Container */
         .top-header {
             display: flex;
             gap: 8px;
@@ -78,9 +73,9 @@
             background-color: rgba(59, 130, 246, 0.05);
             border: 1px solid rgba(59, 130, 246, 0.2);
             color: var(--text-muted);
-            padding: 6px 12px; /* Pinaliit */
+            padding: 6px 12px;
             border-radius: 20px;
-            font-size: 0.7rem; /* Pinaliit */
+            font-size: 0.7rem;
             font-weight: 600;
             text-transform: uppercase;
             display: flex;
@@ -88,20 +83,16 @@
             gap: 4px;
             text-decoration: none;
         }
-
-        /* General Card Styling (Mas Maliit) */
         .card {
             background-color: var(--card-bg);
             border: 1px solid var(--card-border);
             border-radius: 14px;
             width: 100%;
-            padding: 16px; /* Pinaliit mula 24px */
+            padding: 16px;
             margin-bottom: 12px;
             box-sizing: border-box;
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
-
-        /* Main App Header */
         .app-header {
             display: flex;
             align-items: center;
@@ -109,7 +100,7 @@
             margin-bottom: 16px;
         }
         .app-icon {
-            width: 60px; /* Pinaliit mula 72px */
+            width: 60px;
             height: 60px;
             border-radius: 12px;
             display: flex;
@@ -125,8 +116,6 @@
         .badge-apk { background: rgba(16, 185, 129, 0.15); color: var(--accent-green); }
         .badge-ver { background: rgba(59, 130, 246, 0.15); color: var(--accent-blue); }
         .badge-size { background: rgba(148, 163, 184, 0.15); color: var(--text-muted); }
-
-        /* Fake Ratings Section */
         .rating-header { margin: 0 0 10px 0; font-size: 1rem; font-weight: 600; }
         .rating-flex { display: flex; align-items: center; gap: 16px; }
         .score-big { font-size: 3rem; font-weight: 700; line-height: 1; }
@@ -145,8 +134,6 @@
             margin-top: 10px;
             border: 1px solid rgba(16, 185, 129, 0.2);
         }
-
-        /* Download Button */
         .btn-download {
             display: flex;
             align-items: center;
@@ -155,7 +142,7 @@
             width: 100%;
             background: linear-gradient(135deg, #10b981, #059669);
             color: white;
-            padding: 12px; /* Pinaliit */
+            padding: 12px;
             border-radius: 10px;
             text-decoration: none;
             border: none;
@@ -164,18 +151,13 @@
         }
         .btn-main-text { font-weight: 700; font-size: 1rem; }
         .btn-sub-text { font-size: 0.7rem; opacity: 0.9; }
-
-        /* Website Card */
         .web-card-title { display: flex; align-items: center; gap: 10px; color: var(--accent-blue); font-size: 1.1rem; margin-bottom: 10px; }
         .web-link { display: block; color: var(--text-main); text-decoration: none; background: #0f172a; padding: 12px; border-radius: 8px; border: 1px solid var(--card-border); margin-bottom: 10px; word-break: break-all; font-size: 0.85rem;}
         .web-link:hover { border-color: var(--accent-blue); }
         .web-stats { display: flex; align-items: center; gap: 6px; color: var(--accent-green); font-size: 0.8rem; font-weight: 600;}
-
-        /* Comments Section */
         .comment-box { display: flex; flex-direction: column; gap: 10px; margin-top: 15px; }
         .comment-input { width: 100%; background: #0f172a; border: 1px solid var(--card-border); color: white; padding: 10px; border-radius: 8px; resize: none; font-family: inherit; font-size: 0.85rem; box-sizing: border-box; }
         .btn-post { background: var(--accent-blue); color: white; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-weight: 600; align-self: flex-end; font-size: 0.8rem;}
-        
         .comment-list { margin-top: 15px; display: flex; flex-direction: column; gap: 12px; }
         .comment-item { display: flex; gap: 10px; }
         .avatar { width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.8rem; color: white; flex-shrink: 0; }
@@ -186,14 +168,10 @@
         .btn-reply { background: transparent; border: none; color: var(--text-muted); font-size: 0.75rem; cursor: pointer; padding: 0; }
         .btn-reply:hover { color: var(--accent-blue); }
         .replies { margin-top: 8px; padding-left: 15px; border-left: 2px solid var(--card-border); display: flex; flex-direction: column; gap: 8px;}
-
-        /* Gallery */
         .gallery-title { font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; margin-bottom: 10px; font-weight: 600; }
         .gallery-scroll-container { display: flex; gap: 10px; overflow-x: auto; padding-bottom: 8px; scroll-snap-type: x mandatory; scrollbar-width: thin; scrollbar-color: var(--card-border) transparent; }
         .gallery-item { flex: 0 0 auto; width: 110px; height: 200px; background-color: #0b1120; border-radius: 8px; border: 1px solid var(--card-border); overflow: hidden; scroll-snap-align: start; }
         .gallery-item img { width: 100%; height: 100%; object-fit: cover; cursor: pointer; }
-
-        /* Stats Card */
         .stats-header { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
         .stats-icon { background-color: var(--accent-blue); width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-size: 0.9rem;}
         .stats-title { margin: 0; font-size: 1rem; }
@@ -329,58 +307,49 @@
     </div>
 
     <script>
-        // TAB SWITCHING LOGIC
-        function switchTab(tabId) {
-            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
-            document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
-            
-            event.currentTarget.classList.add('active');
-            document.getElementById('tab-' + tabId).classList.add('active');
-        }
+        // =============================================
+        //  COMMENTS WITH SHARED BACKEND (fetch API)
+        // =============================================
 
-        // COMMENT SYSTEM LOGIC
-        // Note: Gumagamit ito ng localStorage. Mag-sa-save ito sa browser ng user.
-        
-        // Random Generator para sa pangalan at kulay
-        function generateRandomUser() {
-            let userStr = Math.random().toString(36).substring(2, 6).toUpperCase();
-            let num = Math.floor(Math.random() * 999) + 100;
-            return "User_" + userStr + num;
-        }
-
-        function getRandomColor() {
-            const colors = ['#f59e0b', '#10b981', '#3b82f6', '#8b5cf6', '#ef4444', '#ec4899', '#14b8a6'];
-            return colors[Math.floor(Math.random() * colors.length)];
-        }
-
-        // Kunin o i-set ang identity ng user na nagba-browse ngayon
+        // --- Identity (random user) ---
         let currentUser = localStorage.getItem('my_random_user');
         let currentColor = localStorage.getItem('my_random_color');
-        
         if (!currentUser) {
-            currentUser = generateRandomUser();
-            currentColor = getRandomColor();
+            currentUser = 'User_' + Math.random().toString(36).substring(2, 6).toUpperCase() + Math.floor(Math.random() * 900 + 100);
+            const colors = ['#f59e0b', '#10b981', '#3b82f6', '#8b5cf6', '#ef4444', '#ec4899', '#14b8a6'];
+            currentColor = colors[Math.floor(Math.random() * colors.length)];
             localStorage.setItem('my_random_user', currentUser);
             localStorage.setItem('my_random_color', currentColor);
         }
 
-        // Load comments mula sa storage
-        let comments = JSON.parse(localStorage.getItem('app_comments')) || [
-            { id: 1, name: "User_B4X912", color: "#3b82f6", text: "Napakaganda ng app! Laking tulong sa pag-aaral ng CMTA.", replies: [] },
-            { id: 2, name: "User_Z9L104", color: "#10b981", text: "Sana magkaroon ng dark mode sa susunod na update.", replies: [] }
-        ];
+        // --- API base URL (change this to your Render backend) ---
+        const API_BASE = 'https://ra10863-comments-api.onrender.com';  // <--- PALITAN ITO
 
-        function saveComments() {
-            localStorage.setItem('app_comments', JSON.stringify(comments));
+        // --- Load comments from backend ---
+        async function loadComments() {
+            try {
+                const res = await fetch(API_BASE + '/api/comments');
+                if (!res.ok) throw new Error('Failed to fetch');
+                const data = await res.json();
+                renderComments(data);
+            } catch (err) {
+                console.error('Error loading comments:', err);
+                document.getElementById('comments-container').innerHTML = 
+                    '<p style="color: var(--text-muted);">⚠️ Unable to load comments. Please try again later.</p>';
+            }
         }
 
-        function renderComments() {
+        // --- Render comments ---
+        function renderComments(comments) {
             const container = document.getElementById('comments-container');
             container.innerHTML = '';
-
+            if (!comments || comments.length === 0) {
+                container.innerHTML = '<p style="color: var(--text-muted);">No comments yet. Be the first!</p>';
+                return;
+            }
+            // Show newest first
             comments.slice().reverse().forEach(comment => {
-                let initial = comment.name.replace('User_', '').charAt(0);
-                
+                const initial = comment.name.replace('User_', '').charAt(0) || 'U';
                 let html = `
                 <div class="comment-item">
                     <div class="avatar" style="background-color: ${comment.color}">${initial}</div>
@@ -390,16 +359,14 @@
                         <div class="comment-actions">
                             <button class="btn-reply" onclick="toggleReplyBox(${comment.id})"><i class="fa-solid fa-reply"></i> Reply</button>
                         </div>
-                        
                         <div id="reply-box-${comment.id}" class="comment-box" style="display:none; margin-top:10px;">
                             <textarea id="reply-input-${comment.id}" class="comment-input" rows="2" placeholder="Write a reply..."></textarea>
                             <button class="btn-post" onclick="postComment(${comment.id})">Post Reply</button>
                         </div>
-
                         <div class="replies">
-                            ${comment.replies.map(reply => `
+                            ${(comment.replies || []).map(reply => `
                                 <div class="comment-item" style="margin-top: 8px;">
-                                    <div class="avatar" style="background-color: ${reply.color}; width: 24px; height: 24px; font-size: 0.6rem;">${reply.name.replace('User_', '').charAt(0)}</div>
+                                    <div class="avatar" style="background-color: ${reply.color}; width: 24px; height: 24px; font-size: 0.6rem;">${reply.name.replace('User_', '').charAt(0) || 'R'}</div>
                                     <div>
                                         <p class="comment-name" style="font-size: 0.75rem;">${reply.name}</p>
                                         <p class="comment-text" style="font-size: 0.8rem;">${reply.text}</p>
@@ -413,43 +380,54 @@
             });
         }
 
+        // --- Toggle reply box ---
         function toggleReplyBox(commentId) {
-            let box = document.getElementById(`reply-box-${commentId}`);
-            box.style.display = box.style.display === 'none' ? 'flex' : 'none';
+            const box = document.getElementById(`reply-box-${commentId}`);
+            if (box) box.style.display = box.style.display === 'none' ? 'flex' : 'none';
         }
 
-        function postComment(parentId) {
-            let inputField = parentId ? document.getElementById(`reply-input-${parentId}`) : document.getElementById('main-comment');
-            let text = inputField.value.trim();
-            
-            if (text === '') return;
+        // --- Post comment (top-level or reply) ---
+        async function postComment(parentId) {
+            const inputField = parentId ? document.getElementById(`reply-input-${parentId}`) : document.getElementById('main-comment');
+            const text = inputField.value.trim();
+            if (!text) return;
 
-            if (parentId) {
-                // Find parent and push reply
-                let parentComment = comments.find(c => c.id === parentId);
-                parentComment.replies.push({
-                    name: currentUser,
-                    color: currentColor,
-                    text: text
+            const payload = {
+                name: currentUser,
+                color: currentColor,
+                text: text
+            };
+            if (parentId) payload.parentId = parentId;
+
+            try {
+                const res = await fetch(API_BASE + '/api/comments', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
                 });
-            } else {
-                // New main comment
-                comments.push({
-                    id: Date.now(),
-                    name: currentUser,
-                    color: currentColor,
-                    text: text,
-                    replies: []
-                });
+                const data = await res.json();
+                if (data.success) {
+                    inputField.value = '';
+                    // Reload all comments to reflect new data
+                    loadComments();
+                } else {
+                    alert('Error: ' + (data.error || 'Unknown error'));
+                }
+            } catch (err) {
+                alert('Network error – please try again.');
             }
-
-            inputField.value = '';
-            saveComments();
-            renderComments();
         }
 
-        // Render pagka-load ng page
-        renderComments();
+        // --- Tab switching ---
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+            event.currentTarget.classList.add('active');
+            document.getElementById('tab-' + tabId).classList.add('active');
+        }
+
+        // --- Start: load comments on page load ---
+        loadComments();
     </script>
 
 </body>
