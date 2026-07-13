@@ -17,11 +17,10 @@
             --accent-purple: #8b5cf6;
             --accent-warning: #f59e0b;
         }
-
         body {
             background-color: var(--bg-color);
             color: var(--text-main);
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             margin: 0;
             padding: 10px;
             display: flex;
@@ -29,8 +28,6 @@
             align-items: center;
             min-height: 100vh;
         }
-
-        /* NAVBAR TABS */
         .nav-tabs {
             display: flex;
             width: 100%;
@@ -62,11 +59,7 @@
             width: 100%;
             max-width: 400px;
         }
-        .tab-content.active {
-            display: block;
-        }
-
-        /* Top Header */
+        .tab-content.active { display: block; }
         .top-header {
             display: flex;
             gap: 8px;
@@ -93,8 +86,6 @@
             border-color: rgba(139, 92, 246, 0.4);
             color: var(--text-main);
         }
-
-        /* Cards */
         .card {
             background-color: var(--card-bg);
             border: 1px solid var(--card-border);
@@ -105,8 +96,6 @@
             box-sizing: border-box;
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
-
-        /* App Header */
         .app-header {
             display: flex;
             align-items: center;
@@ -117,30 +106,32 @@
             width: 60px;
             height: 60px;
             border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             border: 1px solid var(--card-border);
             overflow: hidden;
         }
         .app-icon img { width: 100%; height: 100%; object-fit: cover; }
         .app-title { margin: 0 0 4px 0; font-size: 1.1rem; font-weight: 700; }
         .badges { display: flex; gap: 6px; }
-        .badge { padding: 3px 8px; border-radius: 6px; font-size: 0.65rem; font-weight: 600; display: flex; align-items: center; gap: 4px; }
-        .badge-apk { background: rgba(16, 185, 129, 0.15); color: var(--accent-green); }
-        .badge-ver { background: rgba(59, 130, 246, 0.15); color: var(--accent-blue); }
-        .badge-size { background: rgba(148, 163, 184, 0.15); color: var(--text-muted); }
-
-        /* Rating */
+        .badge {
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-size: 0.65rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .badge-apk { background: rgba(16,185,129,0.15); color: var(--accent-green); }
+        .badge-ver { background: rgba(59,130,246,0.15); color: var(--accent-blue); }
+        .badge-size { background: rgba(148,163,184,0.15); color: var(--text-muted); }
         .rating-header { margin: 0 0 10px 0; font-size: 1rem; font-weight: 600; }
         .rating-flex { display: flex; align-items: center; gap: 16px; }
         .score-big { font-size: 3rem; font-weight: 700; line-height: 1; }
         .stars-container { display: flex; flex-direction: column; gap: 4px; }
         .stars i { color: var(--accent-blue); font-size: 0.9rem; }
-        .stars i.dim { color: var(--card-border); }
         .rating-stats { font-size: 0.75rem; color: var(--text-muted); }
         .install-badge {
-            background: rgba(16, 185, 129, 0.1);
+            background: rgba(16,185,129,0.1);
             color: var(--accent-green);
             padding: 4px 10px;
             border-radius: 8px;
@@ -148,10 +139,8 @@
             font-weight: 600;
             display: inline-block;
             margin-top: 10px;
-            border: 1px solid rgba(16, 185, 129, 0.2);
+            border: 1px solid rgba(16,185,129,0.2);
         }
-
-        /* Download Button */
         .btn-download {
             display: flex;
             align-items: center;
@@ -168,14 +157,14 @@
             box-sizing: border-box;
             transition: transform 0.2s, box-shadow 0.2s;
         }
-        .btn-download:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3); }
+        .btn-download:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(16,185,129,0.3); }
         .btn-main-text { font-weight: 700; font-size: 1rem; }
         .btn-sub-text { font-size: 0.7rem; opacity: 0.9; }
 
         /* Warning Card */
         .warning-card {
-            border-color: rgba(245, 158, 11, 0.3);
-            background: linear-gradient(to bottom right, var(--card-bg), rgba(245, 158, 11, 0.05));
+            border-color: rgba(245,158,11,0.3);
+            background: linear-gradient(to bottom right, var(--card-bg), rgba(245,158,11,0.05));
         }
         .warning-header {
             display: flex;
@@ -198,26 +187,103 @@
             justify-content: center;
             gap: 8px;
             width: 100%;
-            background-color: rgba(245, 158, 11, 0.15);
+            background-color: rgba(245,158,11,0.15);
             color: var(--accent-warning);
             padding: 12px;
             border-radius: 10px;
-            border: 1px solid rgba(245, 158, 11, 0.3);
+            border: 1px solid rgba(245,158,11,0.3);
             font-size: 0.9rem;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.2s;
         }
-        .btn-video:hover { background-color: rgba(245, 158, 11, 0.25); transform: translateY(-2px); }
+        .btn-video:hover { background-color: rgba(245,158,11,0.25); transform: translateY(-2px); }
 
         /* Gallery */
         .gallery-title { font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; margin-bottom: 10px; font-weight: 600; }
-        .gallery-scroll-container { display: flex; gap: 10px; overflow-x: auto; padding-bottom: 8px; scroll-snap-type: x mandatory; scrollbar-width: thin; scrollbar-color: var(--card-border) transparent; }
-        .gallery-item { flex: 0 0 auto; width: 110px; height: 200px; background-color: #0b1120; border-radius: 8px; border: 1px solid var(--card-border); overflow: hidden; scroll-snap-align: start; }
+        .gallery-scroll-container {
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+            padding-bottom: 8px;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: thin;
+            scrollbar-color: var(--card-border) transparent;
+        }
+        .gallery-item {
+            flex: 0 0 auto;
+            width: 110px;
+            height: 200px;
+            background-color: #0b1120;
+            border-radius: 8px;
+            border: 1px solid var(--card-border);
+            overflow: hidden;
+            scroll-snap-align: start;
+        }
         .gallery-item img { width: 100%; height: 100%; object-fit: cover; cursor: pointer; transition: opacity 0.2s; }
         .gallery-item img:hover { opacity: 0.8; }
 
-        /* Modal (for video & images) */
+        /* Stats */
+        .stats-header { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+        .stats-icon { background-color: var(--accent-blue); width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-size: 0.9rem; }
+        .stats-title { margin: 0; font-size: 1rem; }
+        .stat-row { background-color: #0f172a; border: 1px solid var(--card-border); border-radius: 8px; padding: 12px; margin-bottom: 8px; }
+        .stat-row:last-child { margin-bottom: 0; }
+        .stat-label { display: flex; align-items: center; gap: 6px; font-size: 0.65rem; color: var(--text-muted); text-transform: uppercase; margin-bottom: 4px; }
+        .stat-value { font-size: 0.9rem; font-weight: 600; margin: 0; }
+
+        /* Comments */
+        .comment-box { display: flex; flex-direction: column; gap: 10px; margin-top: 15px; }
+        .comment-input { width: 100%; background: #0f172a; border: 1px solid var(--card-border); color: white; padding: 10px; border-radius: 8px; resize: none; font-family: inherit; font-size: 0.85rem; box-sizing: border-box; }
+        .btn-post { background: var(--accent-blue); color: white; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-weight: 600; align-self: flex-end; font-size: 0.8rem; }
+        .comment-list { margin-top: 15px; display: flex; flex-direction: column; gap: 12px; }
+        .comment-item { display: flex; gap: 10px; }
+        .avatar { width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.8rem; color: white; flex-shrink: 0; }
+        .comment-content { background: #0f172a; padding: 10px; border-radius: 8px; border: 1px solid var(--card-border); flex-grow: 1; }
+        .comment-name { font-weight: 600; font-size: 0.8rem; margin: 0 0 4px 0; color: var(--accent-blue); }
+        .comment-text { font-size: 0.85rem; margin: 0; color: var(--text-main); }
+        .comment-actions { margin-top: 6px; display: flex; gap: 10px; }
+        .btn-reply { background: transparent; border: none; color: var(--text-muted); font-size: 0.75rem; cursor: pointer; padding: 0; }
+        .btn-reply:hover { color: var(--accent-blue); }
+        .replies { margin-top: 8px; padding-left: 15px; border-left: 2px solid var(--card-border); display: flex; flex-direction: column; gap: 8px; }
+
+        /* Website Tab - Step Photos */
+        .step-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .step-item {
+            background: #0f172a;
+            border: 1px solid var(--card-border);
+            border-radius: 8px;
+            overflow: hidden;
+            text-align: center;
+            padding: 6px;
+        }
+        .step-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .step-item img:hover { transform: scale(1.02); }
+        .step-label {
+            font-size: 0.65rem;
+            color: var(--text-muted);
+            margin-top: 4px;
+            display: block;
+            font-weight: 600;
+        }
+
+        .web-card-title { display: flex; align-items: center; gap: 10px; color: var(--accent-blue); font-size: 1.1rem; margin-bottom: 10px; }
+        .web-link { display: block; color: var(--text-main); text-decoration: none; background: #0f172a; padding: 12px; border-radius: 8px; border: 1px solid var(--card-border); margin-bottom: 10px; word-break: break-all; font-size: 0.85rem; }
+        .web-link:hover { border-color: var(--accent-blue); }
+        .web-stats { display: flex; align-items: center; gap: 6px; color: var(--accent-green); font-size: 0.8rem; font-weight: 600; }
+
+        /* Modal */
         .modal {
             display: none;
             position: fixed;
@@ -226,7 +292,7 @@
             top: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.9);
+            background-color: rgba(0,0,0,0.9);
             backdrop-filter: blur(5px);
         }
         .modal-image-content {
@@ -254,8 +320,8 @@
             outline: none;
         }
         @keyframes zoomIn {
-            from {transform: scale(0.8); opacity: 0;}
-            to {transform: scale(1); opacity: 1;}
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
         }
         .close-modal {
             position: absolute;
@@ -269,36 +335,6 @@
             z-index: 1001;
         }
         .close-modal:hover { color: var(--accent-blue); }
-
-        /* Stats */
-        .stats-header { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
-        .stats-icon { background-color: var(--accent-blue); width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-size: 0.9rem; }
-        .stats-title { margin: 0; font-size: 1rem; }
-        .stat-row { background-color: #0f172a; border: 1px solid var(--card-border); border-radius: 8px; padding: 12px; margin-bottom: 8px; }
-        .stat-row:last-child { margin-bottom: 0; }
-        .stat-label { display: flex; align-items: center; gap: 6px; font-size: 0.65rem; color: var(--text-muted); text-transform: uppercase; margin-bottom: 4px; }
-        .stat-value { font-size: 0.9rem; font-weight: 600; margin: 0; }
-
-        /* Comments */
-        .comment-box { display: flex; flex-direction: column; gap: 10px; margin-top: 15px; }
-        .comment-input { width: 100%; background: #0f172a; border: 1px solid var(--card-border); color: white; padding: 10px; border-radius: 8px; resize: none; font-family: inherit; font-size: 0.85rem; box-sizing: border-box; }
-        .btn-post { background: var(--accent-blue); color: white; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-weight: 600; align-self: flex-end; font-size: 0.8rem; }
-        .comment-list { margin-top: 15px; display: flex; flex-direction: column; gap: 12px; }
-        .comment-item { display: flex; gap: 10px; }
-        .avatar { width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.8rem; color: white; flex-shrink: 0; }
-        .comment-content { background: #0f172a; padding: 10px; border-radius: 8px; border: 1px solid var(--card-border); flex-grow: 1; }
-        .comment-name { font-weight: 600; font-size: 0.8rem; margin: 0 0 4px 0; color: var(--accent-blue); }
-        .comment-text { font-size: 0.85rem; margin: 0; color: var(--text-main); }
-        .comment-actions { margin-top: 6px; display: flex; gap: 10px; }
-        .btn-reply { background: transparent; border: none; color: var(--text-muted); font-size: 0.75rem; cursor: pointer; padding: 0; }
-        .btn-reply:hover { color: var(--accent-blue); }
-        .replies { margin-top: 8px; padding-left: 15px; border-left: 2px solid var(--card-border); display: flex; flex-direction: column; gap: 8px; }
-
-        /* Website tab */
-        .web-card-title { display: flex; align-items: center; gap: 10px; color: var(--accent-blue); font-size: 1.1rem; margin-bottom: 10px; }
-        .web-link { display: block; color: var(--text-main); text-decoration: none; background: #0f172a; padding: 12px; border-radius: 8px; border: 1px solid var(--card-border); margin-bottom: 10px; word-break: break-all; font-size: 0.85rem; }
-        .web-link:hover { border-color: var(--accent-blue); }
-        .web-stats { display: flex; align-items: center; gap: 6px; color: var(--accent-green); font-size: 0.8rem; font-weight: 600; }
     </style>
 </head>
 <body>
@@ -317,8 +353,8 @@
         <button class="tab-btn" onclick="switchTab('website')"><i class="fa-solid fa-globe"></i> Website</button>
     </div>
 
+    <!-- APK TAB -->
     <div id="tab-app" class="tab-content active">
-        <!-- App Card -->
         <div class="card">
             <div class="app-header">
                 <div class="app-icon">
@@ -333,7 +369,7 @@
                     </div>
                 </div>
             </div>
-            <a href="downloads/app-debug.apk" class="btn-download" download>
+            <a href="downloads/app-debug__3_.apk" class="btn-download" download>
                 <i class="fa-brands fa-android" style="font-size: 1.5rem;"></i>
                 <div style="display: flex; flex-direction: column; align-items: flex-start;">
                     <span class="btn-main-text">Download APK</span>
@@ -342,7 +378,7 @@
             </a>
         </div>
 
-        <!-- Warning Card (with Video) -->
+        <!-- Warning + Video -->
         <div class="card warning-card">
             <div class="warning-header">
                 <i class="fa-solid fa-triangle-exclamation"></i>
@@ -381,19 +417,13 @@
         <div class="card">
             <div class="gallery-title"><i class="fa-regular fa-images"></i> Preview Gallery</div>
             <div class="gallery-scroll-container">
-                <div class="gallery-item">
-                    <img src="images/trusted_by_legal_pros.png" alt="Screenshot" class="zoomable-image">
-                </div>
-                <div class="gallery-item">
-                    <img src="images/read___annotate_easily.png" alt="Screenshot" class="zoomable-image">
-                </div>
-                <div class="gallery-item">
-                    <img src="images/find_laws_instantly.png" alt="Screenshot" class="zoomable-image">
-                </div>
+                <div class="gallery-item"><img src="images/trusted_by_legal_pros.png" alt="Screenshot" class="zoomable-image"></div>
+                <div class="gallery-item"><img src="images/read___annotate_easily.png" alt="Screenshot" class="zoomable-image"></div>
+                <div class="gallery-item"><img src="images/find_laws_instantly.png" alt="Screenshot" class="zoomable-image"></div>
             </div>
         </div>
 
-        <!-- App Stats -->
+        <!-- Stats -->
         <div class="card">
             <div class="stats-header">
                 <div class="stats-icon"><i class="fa-solid fa-chart-line"></i></div>
@@ -405,7 +435,7 @@
             </div>
             <div class="stat-row">
                 <div class="stat-label"><i class="fa-regular fa-calendar"></i> Uploaded</div>
-                <p class="stat-value">Jul 12, 2026</p>
+                <p class="stat-value">Jul 13, 2026</p>
             </div>
         </div>
 
@@ -420,7 +450,7 @@
         </div>
     </div>
 
-    <!-- Website Tab -->
+    <!-- WEBSITE TAB -->
     <div id="tab-website" class="tab-content">
         <div class="card">
             <h2 class="web-card-title"><i class="fa-solid fa-globe"></i> Web Version Available</h2>
@@ -432,6 +462,31 @@
                 <i class="fa-solid fa-fire"></i> 3K+ people open every day
             </div>
         </div>
+
+        <!-- Step-by-Step Photos -->
+        <div class="card">
+            <h2 class="web-card-title"><i class="fa-solid fa-images"></i> How to Download & Install</h2>
+            <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0;">Step-by-step guide for installing the APK on your Android device.</p>
+            <div class="step-grid">
+                <div class="step-item">
+                    <img src="images/step1.jpg" alt="Step 1" class="zoomable-image">
+                    <span class="step-label">1. Enable Unknown Sources</span>
+                </div>
+                <div class="step-item">
+                    <img src="images/step2.jpg" alt="Step 2" class="zoomable-image">
+                    <span class="step-label">2. Download APK</span>
+                </div>
+                <div class="step-item">
+                    <img src="images/step3.jpg" alt="Step 3" class="zoomable-image">
+                    <span class="step-label">3. Open Installer</span>
+                </div>
+                <div class="step-item">
+                    <img src="images/step4.jpg" alt="Step 4" class="zoomable-image">
+                    <span class="step-label">4. Install & Done</span>
+                </div>
+            </div>
+        </div>
+
         <div class="card">
             <h2 class="rating-header">Why use the Web Version?</h2>
             <div class="stat-row">
@@ -446,13 +501,10 @@
     </div>
 
     <!-- MODALS -->
-    <!-- Image Modal -->
     <div id="imageModal" class="modal">
         <span class="close-modal" id="closeImageModal">&times;</span>
         <img class="modal-image-content" id="expandedImg">
     </div>
-
-    <!-- Video Modal -->
     <div id="videoModal" class="modal">
         <span class="close-modal" id="closeVideoModal">&times;</span>
         <div class="video-container">
@@ -464,67 +516,50 @@
     </div>
 
     <script>
-        // ========== TAB SWITCHING ==========
+        // ======= TAB SWITCHING =======
         function switchTab(tabId) {
-            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
-            document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
             event.currentTarget.classList.add('active');
             document.getElementById('tab-' + tabId).classList.add('active');
         }
 
-        // ========== IMAGE MODAL ==========
+        // ======= IMAGE MODAL =======
         var imageModal = document.getElementById("imageModal");
         var modalImg = document.getElementById("expandedImg");
-        var images = document.querySelectorAll(".zoomable-image");
         var closeImageBtn = document.getElementById("closeImageModal");
-
-        images.forEach(function(img) {
-            img.onclick = function(){
-                imageModal.style.display = "block";
-                modalImg.src = this.src;
-            }
+        document.querySelectorAll(".zoomable-image").forEach(img => {
+            img.onclick = function(){ imageModal.style.display = "block"; modalImg.src = this.src; };
         });
-        closeImageBtn.onclick = function() { imageModal.style.display = "none"; };
-        imageModal.onclick = function(event) {
-            if (event.target !== modalImg) { imageModal.style.display = "none"; }
-        }
+        closeImageBtn.onclick = function(){ imageModal.style.display = "none"; };
+        imageModal.onclick = function(e) { if(e.target !== modalImg) imageModal.style.display = "none"; };
 
-        // ========== VIDEO MODAL ==========
+        // ======= VIDEO MODAL =======
         var videoModal = document.getElementById("videoModal");
         var openVideoBtn = document.getElementById("openVideoBtn");
         var closeVideoBtn = document.getElementById("closeVideoModal");
         var tutorialVideo = document.getElementById("tutorialVideo");
-
-        openVideoBtn.onclick = function() {
-            videoModal.style.display = "block";
-            tutorialVideo.play();
-        };
-        closeVideoBtn.onclick = function() {
-            videoModal.style.display = "none";
-            tutorialVideo.pause();
-            tutorialVideo.currentTime = 0;
-        };
-        videoModal.onclick = function(event) {
-            if (event.target === videoModal || event.target === document.querySelector('.video-container')) {
-                videoModal.style.display = "none";
-                tutorialVideo.pause();
-                tutorialVideo.currentTime = 0;
+        openVideoBtn.onclick = function(){ videoModal.style.display = "block"; tutorialVideo.play(); };
+        closeVideoBtn.onclick = function(){ videoModal.style.display = "none"; tutorialVideo.pause(); tutorialVideo.currentTime = 0; };
+        videoModal.onclick = function(e) {
+            if(e.target === videoModal || e.target === document.querySelector('.video-container')) {
+                videoModal.style.display = "none"; tutorialVideo.pause(); tutorialVideo.currentTime = 0;
             }
         };
 
-        // ========== SHARED COMMENTS (via backend) ==========
+        // ======= SHARED COMMENTS (BACKEND) =======
         // Identity
         let currentUser = localStorage.getItem('my_random_user');
         let currentColor = localStorage.getItem('my_random_color');
         if (!currentUser) {
-            currentUser = 'User_' + Math.random().toString(36).substring(2, 6).toUpperCase() + Math.floor(Math.random() * 900 + 100);
-            const colors = ['#f59e0b', '#10b981', '#3b82f6', '#8b5cf6', '#ef4444', '#ec4899', '#14b8a6'];
+            currentUser = 'User_' + Math.random().toString(36).substring(2,6).toUpperCase() + Math.floor(Math.random()*900+100);
+            const colors = ['#f59e0b','#10b981','#3b82f6','#8b5cf6','#ef4444','#ec4899','#14b8a6'];
             currentColor = colors[Math.floor(Math.random() * colors.length)];
             localStorage.setItem('my_random_user', currentUser);
             localStorage.setItem('my_random_color', currentColor);
         }
 
-        const API_BASE = 'https://app-store-rnvz.onrender.com';  // <--- tama na
+        const API_BASE = 'https://app-store-rnvz.onrender.com';  // <-- iyong backend URL
 
         async function loadComments() {
             try {
@@ -532,9 +567,9 @@
                 if (!res.ok) throw new Error('Failed to fetch');
                 const data = await res.json();
                 renderComments(data);
-            } catch (err) {
+            } catch(err) {
                 console.error('Error loading comments:', err);
-                document.getElementById('comments-container').innerHTML = 
+                document.getElementById('comments-container').innerHTML =
                     '<p style="color: var(--text-muted);">⚠️ Unable to load comments. Please try again later.</p>';
             }
         }
@@ -547,7 +582,7 @@
                 return;
             }
             comments.slice().reverse().forEach(comment => {
-                const initial = comment.name.replace('User_', '').charAt(0) || 'U';
+                const initial = comment.name.replace('User_','').charAt(0) || 'U';
                 let html = `
                 <div class="comment-item">
                     <div class="avatar" style="background-color: ${comment.color}">${initial}</div>
@@ -563,11 +598,11 @@
                         </div>
                         <div class="replies">
                             ${(comment.replies || []).map(reply => `
-                                <div class="comment-item" style="margin-top: 8px;">
-                                    <div class="avatar" style="background-color: ${reply.color}; width: 24px; height: 24px; font-size: 0.6rem;">${reply.name.replace('User_', '').charAt(0) || 'R'}</div>
+                                <div class="comment-item" style="margin-top:8px;">
+                                    <div class="avatar" style="background-color: ${reply.color}; width:24px; height:24px; font-size:0.6rem;">${reply.name.replace('User_','').charAt(0) || 'R'}</div>
                                     <div>
-                                        <p class="comment-name" style="font-size: 0.75rem;">${reply.name}</p>
-                                        <p class="comment-text" style="font-size: 0.8rem;">${reply.text}</p>
+                                        <p class="comment-name" style="font-size:0.75rem;">${reply.name}</p>
+                                        <p class="comment-text" style="font-size:0.8rem;">${reply.text}</p>
                                     </div>
                                 </div>
                             `).join('')}
@@ -587,14 +622,8 @@
             const inputField = parentId ? document.getElementById(`reply-input-${parentId}`) : document.getElementById('main-comment');
             const text = inputField.value.trim();
             if (!text) return;
-
-            const payload = {
-                name: currentUser,
-                color: currentColor,
-                text: text
-            };
+            const payload = { name: currentUser, color: currentColor, text: text };
             if (parentId) payload.parentId = parentId;
-
             try {
                 const res = await fetch(API_BASE + '/api/comments', {
                     method: 'POST',
@@ -608,7 +637,7 @@
                 } else {
                     alert('Error: ' + (data.error || 'Unknown error'));
                 }
-            } catch (err) {
+            } catch(err) {
                 alert('Network error – please try again.');
             }
         }
