@@ -103,31 +103,12 @@
             box-sizing: border-box;
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
-        .app-header {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 16px;
-        }
-        .app-icon {
-            width: 60px;
-            height: 60px;
-            border-radius: 12px;
-            border: 1px solid var(--card-border);
-            overflow: hidden;
-        }
+        .app-header { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+        .app-icon { width: 60px; height: 60px; border-radius: 12px; border: 1px solid var(--card-border); overflow: hidden; }
         .app-icon img { width: 100%; height: 100%; object-fit: cover; }
         .app-title { margin: 0 0 4px 0; font-size: 1.1rem; font-weight: 700; }
         .badges { display: flex; gap: 6px; flex-wrap: wrap; }
-        .badge {
-            padding: 3px 8px;
-            border-radius: 6px;
-            font-size: 0.65rem;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 4px;
-        }
+        .badge { padding: 3px 8px; border-radius: 6px; font-size: 0.65rem; font-weight: 600; display: flex; align-items: center; gap: 4px; }
         .badge-apk { background: rgba(16,185,129,0.15); color: var(--accent-green); }
         .badge-ios { background: rgba(0,122,255,0.15); color: var(--accent-ios); }
         .badge-ver { background: rgba(59,130,246,0.15); color: var(--accent-blue); }
@@ -139,228 +120,144 @@
         .stars i { color: var(--accent-blue); font-size: 0.9rem; }
         .rating-stats { font-size: 0.75rem; color: var(--text-muted); }
         .install-badge {
-            background: rgba(16,185,129,0.1);
-            color: var(--accent-green);
-            padding: 4px 10px;
-            border-radius: 8px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            display: inline-block;
-            margin-top: 10px;
-            border: 1px solid rgba(16,185,129,0.2);
+            background: rgba(16,185,129,0.1); color: var(--accent-green); padding: 4px 10px;
+            border-radius: 8px; font-size: 0.75rem; font-weight: 600; display: inline-block;
+            margin-top: 10px; border: 1px solid rgba(16,185,129,0.2);
         }
         .btn-download {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            width: 100%;
-            background: linear-gradient(135deg, #10b981, #059669);
-            color: white;
-            padding: 12px;
-            border-radius: 10px;
-            text-decoration: none;
-            border: none;
-            cursor: pointer;
-            box-sizing: border-box;
-            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex; align-items: center; justify-content: center; gap: 10px;
+            width: 100%; background: linear-gradient(135deg, #10b981, #059669);
+            color: white; padding: 12px; border-radius: 10px; text-decoration: none;
+            border: none; cursor: pointer; box-sizing: border-box; transition: transform 0.2s, box-shadow 0.2s;
         }
         .btn-download:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(16,185,129,0.3); }
         .btn-main-text { font-weight: 700; font-size: 1rem; }
         .btn-sub-text { font-size: 0.7rem; opacity: 0.9; }
-
         .btn-web {
-            background: linear-gradient(135deg, #007AFF, #0051a8);
-            color: white;
-            padding: 12px;
-            border-radius: 10px;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            font-weight: 600;
-            margin-top: 12px;
+            background: linear-gradient(135deg, #007AFF, #0051a8); color: white;
+            padding: 12px; border-radius: 10px; text-decoration: none;
+            display: flex; align-items: center; justify-content: center; gap: 8px;
+            font-weight: 600; margin-top: 12px;
         }
         .btn-web:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(0,122,255,0.3); }
-
-        /* Warning Card */
         .warning-card {
             border-color: rgba(245,158,11,0.3);
             background: linear-gradient(to bottom right, var(--card-bg), rgba(245,158,11,0.05));
         }
-        .warning-header {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            color: var(--accent-warning);
-            margin-bottom: 10px;
-        }
+        .warning-header { display: flex; align-items: center; gap: 10px; color: var(--accent-warning); margin-bottom: 10px; }
         .warning-header h3 { margin: 0; font-size: 1.05rem; }
-        .warning-text {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            line-height: 1.5;
-            margin: 0 0 16px 0;
-        }
+        .warning-text { font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; margin: 0 0 16px 0; }
         .warning-text strong { color: #cbd5e1; }
         .btn-video {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            width: 100%;
-            background-color: rgba(245,158,11,0.15);
-            color: var(--accent-warning);
-            padding: 12px;
-            border-radius: 10px;
-            border: 1px solid rgba(245,158,11,0.3);
-            font-size: 0.9rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.2s;
+            display: flex; align-items: center; justify-content: center; gap: 8px;
+            width: 100%; background-color: rgba(245,158,11,0.15); color: var(--accent-warning);
+            padding: 12px; border-radius: 10px; border: 1px solid rgba(245,158,11,0.3);
+            font-size: 0.9rem; font-weight: 600; cursor: pointer; transition: all 0.2s;
         }
         .btn-video:hover { background-color: rgba(245,158,11,0.25); transform: translateY(-2px); }
-
-        /* Gallery */
         .gallery-title { font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; margin-bottom: 10px; font-weight: 600; }
         .gallery-scroll-container {
-            display: flex;
-            gap: 10px;
-            overflow-x: auto;
-            padding-bottom: 8px;
-            scroll-snap-type: x mandatory;
-            scrollbar-width: thin;
-            scrollbar-color: var(--card-border) transparent;
+            display: flex; gap: 10px; overflow-x: auto; padding-bottom: 8px;
+            scroll-snap-type: x mandatory; scrollbar-width: thin; scrollbar-color: var(--card-border) transparent;
         }
         .gallery-item {
-            flex: 0 0 auto;
-            width: 110px;
-            height: 200px;
-            background-color: #0b1120;
-            border-radius: 8px;
-            border: 1px solid var(--card-border);
-            overflow: hidden;
+            flex: 0 0 auto; width: 110px; height: 200px; background-color: #0b1120;
+            border-radius: 8px; border: 1px solid var(--card-border); overflow: hidden;
             scroll-snap-align: start;
         }
         .gallery-item img { width: 100%; height: 100%; object-fit: cover; cursor: pointer; transition: opacity 0.2s; }
         .gallery-item img:hover { opacity: 0.8; }
-
-        /* Stats */
         .stats-header { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
-        .stats-icon { background-color: var(--accent-blue); width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-size: 0.9rem; }
+        .stats-icon {
+            background-color: var(--accent-blue); width: 32px; height: 32px;
+            border-radius: 8px; display: flex; align-items: center; justify-content: center;
+            color: white; font-size: 0.9rem;
+        }
         .stats-title { margin: 0; font-size: 1rem; }
-        .stat-row { background-color: #0f172a; border: 1px solid var(--card-border); border-radius: 8px; padding: 12px; margin-bottom: 8px; }
+        .stat-row {
+            background-color: #0f172a; border: 1px solid var(--card-border);
+            border-radius: 8px; padding: 12px; margin-bottom: 8px;
+        }
         .stat-row:last-child { margin-bottom: 0; }
-        .stat-label { display: flex; align-items: center; gap: 6px; font-size: 0.65rem; color: var(--text-muted); text-transform: uppercase; margin-bottom: 4px; }
+        .stat-label {
+            display: flex; align-items: center; gap: 6px; font-size: 0.65rem;
+            color: var(--text-muted); text-transform: uppercase; margin-bottom: 4px;
+        }
         .stat-value { font-size: 0.9rem; font-weight: 600; margin: 0; }
-
-        /* iOS specific */
         .ios-step { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; }
-        .ios-step-num { background: var(--accent-ios); color: white; border-radius: 50%; width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.8rem; flex-shrink: 0; margin-top: 2px; }
+        .ios-step-num {
+            background: var(--accent-ios); color: white; border-radius: 50%;
+            width: 24px; height: 24px; display: flex; align-items: center; justify-content: center;
+            font-weight: bold; font-size: 0.8rem; flex-shrink: 0; margin-top: 2px;
+        }
         .ios-step-text { font-size: 0.9rem; color: var(--text-main); }
-
-        /* Comments */
         .comment-box { display: flex; flex-direction: column; gap: 10px; margin-top: 15px; }
-        .comment-input { width: 100%; background: #0f172a; border: 1px solid var(--card-border); color: white; padding: 10px; border-radius: 8px; resize: none; font-family: inherit; font-size: 0.85rem; box-sizing: border-box; }
-        .btn-post { background: var(--accent-blue); color: white; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-weight: 600; align-self: flex-end; font-size: 0.8rem; }
+        .comment-input {
+            width: 100%; background: #0f172a; border: 1px solid var(--card-border);
+            color: white; padding: 10px; border-radius: 8px; resize: none;
+            font-family: inherit; font-size: 0.85rem; box-sizing: border-box;
+        }
+        .btn-post {
+            background: var(--accent-blue); color: white; border: none; padding: 8px 16px;
+            border-radius: 6px; cursor: pointer; font-weight: 600; align-self: flex-end; font-size: 0.8rem;
+        }
         .comment-list { margin-top: 15px; display: flex; flex-direction: column; gap: 12px; }
         .comment-item { display: flex; gap: 10px; }
-        .avatar { width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.8rem; color: white; flex-shrink: 0; }
-        .comment-content { background: #0f172a; padding: 10px; border-radius: 8px; border: 1px solid var(--card-border); flex-grow: 1; }
+        .avatar {
+            width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center;
+            justify-content: center; font-weight: bold; font-size: 0.8rem; color: white; flex-shrink: 0;
+        }
+        .comment-content {
+            background: #0f172a; padding: 10px; border-radius: 8px;
+            border: 1px solid var(--card-border); flex-grow: 1;
+        }
         .comment-name { font-weight: 600; font-size: 0.8rem; margin: 0 0 4px 0; color: var(--accent-blue); }
         .comment-text { font-size: 0.85rem; margin: 0; color: var(--text-main); }
         .comment-actions { margin-top: 6px; display: flex; gap: 10px; }
-        .btn-reply { background: transparent; border: none; color: var(--text-muted); font-size: 0.75rem; cursor: pointer; padding: 0; }
+        .btn-reply {
+            background: transparent; border: none; color: var(--text-muted);
+            font-size: 0.75rem; cursor: pointer; padding: 0;
+        }
         .btn-reply:hover { color: var(--accent-blue); }
         .replies { margin-top: 8px; padding-left: 15px; border-left: 2px solid var(--card-border); display: flex; flex-direction: column; gap: 8px; }
-
-        /* Website Tab - Step Photos */
-        .step-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-            margin-top: 10px;
-        }
+        .step-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px; }
         .step-item {
-            background: #0f172a;
-            border: 1px solid var(--card-border);
-            border-radius: 8px;
-            overflow: hidden;
-            text-align: center;
-            padding: 6px;
+            background: #0f172a; border: 1px solid var(--card-border);
+            border-radius: 8px; overflow: hidden; text-align: center; padding: 6px;
         }
-        .step-item img {
-            width: 100%;
-            height: auto;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: transform 0.2s;
-        }
+        .step-item img { width: 100%; height: auto; border-radius: 4px; cursor: pointer; transition: transform 0.2s; }
         .step-item img:hover { transform: scale(1.02); }
-        .step-label {
-            font-size: 0.65rem;
-            color: var(--text-muted);
-            margin-top: 4px;
-            display: block;
-            font-weight: 600;
-        }
-
+        .step-label { font-size: 0.65rem; color: var(--text-muted); margin-top: 4px; display: block; font-weight: 600; }
         .web-card-title { display: flex; align-items: center; gap: 10px; color: var(--accent-blue); font-size: 1.1rem; margin-bottom: 10px; }
-        .web-link { display: block; color: var(--text-main); text-decoration: none; background: #0f172a; padding: 12px; border-radius: 8px; border: 1px solid var(--card-border); margin-bottom: 10px; word-break: break-all; font-size: 0.85rem; }
+        .web-link {
+            display: block; color: var(--text-main); text-decoration: none;
+            background: #0f172a; padding: 12px; border-radius: 8px;
+            border: 1px solid var(--card-border); margin-bottom: 10px;
+            word-break: break-all; font-size: 0.85rem;
+        }
         .web-link:hover { border-color: var(--accent-blue); }
         .web-stats { display: flex; align-items: center; gap: 6px; color: var(--accent-green); font-size: 0.8rem; font-weight: 600; }
-
-        /* Modal */
         .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.9);
+            display: none; position: fixed; z-index: 1000; left: 0; top: 0;
+            width: 100%; height: 100%; background-color: rgba(0,0,0,0.9);
             backdrop-filter: blur(5px);
         }
         .modal-image-content {
-            margin: auto;
-            display: block;
-            width: 85%;
-            max-width: 450px;
-            border-radius: 16px;
-            margin-top: 60px;
-            animation: zoomIn 0.3s;
+            margin: auto; display: block; width: 85%; max-width: 450px;
+            border-radius: 16px; margin-top: 60px; animation: zoomIn 0.3s;
         }
-        .video-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100%;
-            width: 100%;
-        }
+        .video-container { display: flex; align-items: center; justify-content: center; height: 100%; width: 100%; }
         .video-container video {
-            width: 85%;
-            max-width: 400px;
-            border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            animation: zoomIn 0.3s;
-            outline: none;
+            width: 85%; max-width: 400px; border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5); animation: zoomIn 0.3s; outline: none;
         }
         @keyframes zoomIn {
             from { transform: scale(0.8); opacity: 0; }
             to { transform: scale(1); opacity: 1; }
         }
         .close-modal {
-            position: absolute;
-            top: 20px;
-            right: 30px;
-            color: #f1f1f1;
-            font-size: 40px;
-            font-weight: bold;
-            transition: 0.3s;
-            cursor: pointer;
-            z-index: 1001;
+            position: absolute; top: 20px; right: 30px; color: #f1f1f1;
+            font-size: 40px; font-weight: bold; transition: 0.3s; cursor: pointer; z-index: 1001;
         }
         .close-modal:hover { color: var(--accent-blue); }
     </style>
@@ -368,12 +265,8 @@
 <body>
 
     <div class="top-header">
-        <div class="badge-top">
-            <i class="fa-solid fa-server"></i> Hosted on <span class="blue-text">&nbsp;GitHub Pages</span>
-        </div>
-        <a href="https://osiasnalaunan68-star.github.io/osias-personal-portfolio" target="_blank" class="badge-top">
-            <i class="fa-solid fa-code"></i> Developer: <span class="purple-text">&nbsp;Osias</span>
-        </a>
+        <div class="badge-top"><i class="fa-solid fa-server"></i> Hosted on <span class="blue-text">&nbsp;GitHub Pages</span></div>
+        <a href="https://osiasnalaunan68-star.github.io/osias-personal-portfolio" target="_blank" class="badge-top"><i class="fa-solid fa-code"></i> Developer: <span class="purple-text">&nbsp;Osias</span></a>
     </div>
 
     <div class="nav-tabs">
@@ -386,9 +279,7 @@
     <div id="tab-app" class="tab-content active">
         <div class="card">
             <div class="app-header">
-                <div class="app-icon">
-                    <img src="images/app-logo.png" alt="Customs Tech Logo">
-                </div>
+                <div class="app-icon"><img src="images/app-logo.png" alt="Logo"></div>
                 <div>
                     <h1 class="app-title">RA 10863 CMTA</h1>
                     <div class="badges">
@@ -408,16 +299,9 @@
         </div>
 
         <div class="card warning-card">
-            <div class="warning-header">
-                <i class="fa-solid fa-triangle-exclamation"></i>
-                <h3>Installation Blocked?</h3>
-            </div>
-            <p class="warning-text">
-                Dahil wala pa ang app na ito sa Google Play Store, maaaring i-block ng <strong>Google Play Protect</strong> ang iyong installation. Huwag mag-alala, safe ang app na ito! Panoorin kung paano i-bypass.
-            </p>
-            <button class="btn-video" id="openVideoBtn">
-                <i class="fa-solid fa-circle-play"></i> Watch Installation Guide
-            </button>
+            <div class="warning-header"><i class="fa-solid fa-triangle-exclamation"></i><h3>Installation Blocked?</h3></div>
+            <p class="warning-text">Dahil wala pa ang app na ito sa Google Play Store, maaaring i-block ng <strong>Google Play Protect</strong> ang iyong installation. Huwag mag-alala, safe ang app na ito! Panoorin kung paano i-bypass.</p>
+            <button class="btn-video" id="openVideoBtn"><i class="fa-solid fa-circle-play"></i> Watch Installation Guide</button>
         </div>
 
         <div class="card">
@@ -425,52 +309,26 @@
             <div class="rating-flex">
                 <div class="score-big">4.5</div>
                 <div class="stars-container">
-                    <div class="stars">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star-half-stroke"></i>
-                    </div>
+                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></div>
                     <div class="rating-stats">8,439 ratings</div>
                 </div>
             </div>
-            <div class="install-badge">
-                <i class="fa-solid fa-download"></i> 10K+ Installs
-            </div>
+            <div class="install-badge"><i class="fa-solid fa-download"></i> 10K+ Installs</div>
         </div>
 
         <div class="card">
             <div class="gallery-title"><i class="fa-regular fa-images"></i> Preview Gallery</div>
             <div class="gallery-scroll-container">
-                <div class="gallery-item"><img src="images/trusted_by_legal_pros.png" alt="Screenshot" class="zoomable-image"></div>
-                <div class="gallery-item"><img src="images/read___annotate_easily.png" alt="Screenshot" class="zoomable-image"></div>
-                <div class="gallery-item"><img src="images/find_laws_instantly.png" alt="Screenshot" class="zoomable-image"></div>
+                <div class="gallery-item"><img src="images/trusted_by_legal_pros.png" class="zoomable-image"></div>
+                <div class="gallery-item"><img src="images/read___annotate_easily.png" class="zoomable-image"></div>
+                <div class="gallery-item"><img src="images/find_laws_instantly.png" class="zoomable-image"></div>
             </div>
         </div>
 
         <div class="card">
-            <div class="stats-header">
-                <div class="stats-icon"><i class="fa-solid fa-chart-line"></i></div>
-                <h2 class="stats-title">App Overview</h2>
-            </div>
-            <div class="stat-row">
-                <div class="stat-label"><i class="fa-solid fa-hashtag"></i> Version</div>
-                <p class="stat-value">v1.0 (1)</p>
-            </div>
-            <div class="stat-row">
-                <div class="stat-label"><i class="fa-regular fa-calendar"></i> Uploaded</div>
-                <p class="stat-value">Jul 13, 2026</p>
-            </div>
-        </div>
-
-        <div class="card">
-            <h2 class="rating-header">User Comments & Suggestions</h2>
-            <div class="comment-box">
-                <textarea id="main-comment" class="comment-input" rows="3" placeholder="Leave a review or suggestion..."></textarea>
-                <button class="btn-post" onclick="postComment(null)">Post Comment</button>
-            </div>
-            <div class="comment-list" id="comments-container"></div>
+            <div class="stats-header"><div class="stats-icon"><i class="fa-solid fa-chart-line"></i></div><h2 class="stats-title">App Overview</h2></div>
+            <div class="stat-row"><div class="stat-label"><i class="fa-solid fa-hashtag"></i> Version</div><p class="stat-value">v1.0 (1)</p></div>
+            <div class="stat-row"><div class="stat-label"><i class="fa-regular fa-calendar"></i> Uploaded</div><p class="stat-value">Jul 13, 2026</p></div>
         </div>
     </div>
 
@@ -478,9 +336,7 @@
     <div id="tab-ios" class="tab-content">
         <div class="card">
             <div class="app-header">
-                <div class="app-icon">
-                    <img src="images/app-logo.png" alt="Customs Tech Logo">
-                </div>
+                <div class="app-icon"><img src="images/app-logo.png" alt="Logo"></div>
                 <div>
                     <h1 class="app-title">RA 10863 CMTA</h1>
                     <div class="badges">
@@ -490,43 +346,23 @@
                     </div>
                 </div>
             </div>
-            <p style="color: var(--text-muted); font-size:0.9rem;">Walang native iOS app, pero kayang-kaya ng iPhone at iPad na gamitin ang web version bilang full-screen app — kahit offline!</p>
-            <a href="https://osiasnalaunan68-star.github.io/osias--clone/" target="_blank" class="btn-web">
-                <i class="fa-solid fa-globe"></i> Open Web App
-            </a>
+            <p style="color: var(--text-muted); font-size:0.9rem;">Walang native iOS app, pero kayang-kaya ng iPhone at iPad ang web version bilang full-screen app — kahit offline!</p>
+            <a href="https://osiasnalaunan68-star.github.io/osias--clone/" target="_blank" class="btn-web"><i class="fa-solid fa-globe"></i> Open Web App</a>
         </div>
 
         <div class="card">
             <h2 class="web-card-title" style="color: var(--accent-ios);"><i class="fa-solid fa-square-plus"></i> How to Add to Home Screen</h2>
-            <div class="ios-step">
-                <div class="ios-step-num">1</div>
-                <div class="ios-step-text">Open <strong>Safari</strong> and go to the website link above.</div>
-            </div>
-            <div class="ios-step">
-                <div class="ios-step-num">2</div>
-                <div class="ios-step-text">Tap the <strong>Share button</strong> <span style="background:#f1f5f9; color:#1e293b; padding:2px 6px; border-radius:4px;">⬆️</span> at the bottom of the screen.</div>
-            </div>
-            <div class="ios-step">
-                <div class="ios-step-num">3</div>
-                <div class="ios-step-text">Scroll and select <strong>"Add to Home Screen"</strong>.</div>
-            </div>
-            <div class="ios-step">
-                <div class="ios-step-num">4</div>
-                <div class="ios-step-text">Rename if you like, then tap <strong>Add</strong>. The app icon will appear on your Home Screen.</div>
-            </div>
-            <p style="font-size:0.8rem; color: var(--text-muted); margin-top:16px;">Pagkatapos, buksan lang ang bagong icon — may full offline access ka na sa RA 10863, tulad ng tunay na app!</p>
+            <div class="ios-step"><div class="ios-step-num">1</div><div class="ios-step-text">Open <strong>Safari</strong> and go to the website link above.</div></div>
+            <div class="ios-step"><div class="ios-step-num">2</div><div class="ios-step-text">Tap the <strong>Share button</strong> <span style="background:#f1f5f9; color:#1e293b; padding:2px 6px; border-radius:4px;">⬆️</span> at the bottom.</div></div>
+            <div class="ios-step"><div class="ios-step-num">3</div><div class="ios-step-text">Scroll and select <strong>"Add to Home Screen"</strong>.</div></div>
+            <div class="ios-step"><div class="ios-step-num">4</div><div class="ios-step-text">Rename if you like, then tap <strong>Add</strong>. Done!</div></div>
+            <p style="font-size:0.8rem; color: var(--text-muted); margin-top:16px;">Full offline access na sa RA 10863 — parang native app!</p>
         </div>
 
         <div class="card">
             <h2 class="rating-header">Why use the Web App?</h2>
-            <div class="stat-row">
-                <div class="stat-label"><i class="fa-solid fa-bolt"></i> Fast</div>
-                <p class="stat-value">No download needed – works instantly after adding to Home Screen.</p>
-            </div>
-            <div class="stat-row">
-                <div class="stat-label"><i class="fa-solid fa-cloud-arrow-down"></i> Offline</div>
-                <p class="stat-value">All laws cached. Read, highlight, and search even without internet.</p>
-            </div>
+            <div class="stat-row"><div class="stat-label"><i class="fa-solid fa-bolt"></i> Fast</div><p class="stat-value">No download needed – instant after adding to Home Screen.</p></div>
+            <div class="stat-row"><div class="stat-label"><i class="fa-solid fa-cloud-arrow-down"></i> Offline</div><p class="stat-value">Read, highlight, search – no internet required.</p></div>
         </div>
     </div>
 
@@ -535,48 +371,36 @@
         <div class="card">
             <h2 class="web-card-title"><i class="fa-solid fa-globe"></i> Web Version Available</h2>
             <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0;">Now fully offline – study RA 10863 anytime, even without internet. Hosted on GitHub Pages.</p>
-            <a href="https://osiasnalaunan68-star.github.io/osias--clone/" target="_blank" class="web-link">
-                <i class="fa-solid fa-link" style="color: var(--accent-blue);"></i> osiasnalaunan68-star.github.io/osias--clone
-            </a>
-            <div class="web-stats">
-                <i class="fa-solid fa-fire"></i> Offline-ready &amp; always available
-            </div>
+            <a href="https://osiasnalaunan68-star.github.io/osias--clone/" target="_blank" class="web-link"><i class="fa-solid fa-link" style="color: var(--accent-blue);"></i> osiasnalaunan68-star.github.io/osias--clone</a>
+            <div class="web-stats"><i class="fa-solid fa-fire"></i> Offline-ready &amp; always available</div>
         </div>
 
         <div class="card">
             <h2 class="web-card-title"><i class="fa-solid fa-images"></i> How to Download & Install</h2>
-            <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0;">Step-by-step guide for installing the APK on your Android device.</p>
+            <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0;">Step-by-step guide for installing the APK on Android.</p>
             <div class="step-grid">
-                <div class="step-item">
-                    <img src="images/step1.jpg" alt="Step 1" class="zoomable-image">
-                    <span class="step-label">1. Enable Unknown Sources</span>
-                </div>
-                <div class="step-item">
-                    <img src="images/step2.jpg" alt="Step 2" class="zoomable-image">
-                    <span class="step-label">2. Download APK</span>
-                </div>
-                <div class="step-item">
-                    <img src="images/step3.jpg" alt="Step 3" class="zoomable-image">
-                    <span class="step-label">3. Open Installer</span>
-                </div>
-                <div class="step-item">
-                    <img src="images/step4.jpg" alt="Step 4" class="zoomable-image">
-                    <span class="step-label">4. Install & Done</span>
-                </div>
+                <div class="step-item"><img src="images/step1.jpg" class="zoomable-image"><span class="step-label">1. Enable Unknown Sources</span></div>
+                <div class="step-item"><img src="images/step2.jpg" class="zoomable-image"><span class="step-label">2. Download APK</span></div>
+                <div class="step-item"><img src="images/step3.jpg" class="zoomable-image"><span class="step-label">3. Open Installer</span></div>
+                <div class="step-item"><img src="images/step4.jpg" class="zoomable-image"><span class="step-label">4. Install & Done</span></div>
             </div>
         </div>
 
         <div class="card">
             <h2 class="rating-header">Why use the Web Version?</h2>
-            <div class="stat-row">
-                <div class="stat-label"><i class="fa-solid fa-bolt"></i> Fast</div>
-                <p class="stat-value">Instant access, no download required.</p>
-            </div>
-            <div class="stat-row">
-                <div class="stat-label"><i class="fa-solid fa-display"></i> Cross-Platform</div>
-                <p class="stat-value">Works on iOS, Android, Mac, and Windows.</p>
-            </div>
+            <div class="stat-row"><div class="stat-label"><i class="fa-solid fa-bolt"></i> Fast</div><p class="stat-value">Instant access, no download.</p></div>
+            <div class="stat-row"><div class="stat-label"><i class="fa-solid fa-display"></i> Cross-Platform</div><p class="stat-value">Works on iOS, Android, Mac, Windows.</p></div>
         </div>
+    </div>
+
+    <!-- COMMENTS SECTION (visible on all tabs) -->
+    <div class="card" style="max-width:400px; width:100%;">
+        <h2 class="rating-header">User Comments & Suggestions</h2>
+        <div class="comment-box">
+            <textarea id="main-comment" class="comment-input" rows="3" placeholder="Leave a review or suggestion..."></textarea>
+            <button class="btn-post" onclick="postComment(null)">Post Comment</button>
+        </div>
+        <div class="comment-list" id="comments-container"></div>
     </div>
 
     <!-- MODALS -->
@@ -626,29 +450,74 @@
             }
         };
 
-        // ======= SHARED COMMENTS (BACKEND) =======
-        let currentUser = localStorage.getItem('my_random_user');
-        let currentColor = localStorage.getItem('my_random_color');
+        // ======= PERMANENT COMMENTS VIA GITHUB API =======
+        // ----- CONFIGURE YOUR TOKEN HERE -----
+        const GITHUB_TOKEN = 'YOUR_FINE_GRAINED_TOKEN_HERE'; // <-- PALITAN MO ITO NG TOTOONG TOKEN
+        const REPO_OWNER = 'osiasnalaunan68-star';
+        const REPO_NAME = 'app-store';
+        const COMMENTS_FILE = 'comments.json';
+        const API_BASE = `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${COMMENTS_FILE}`;
+
+        // Auto-generated identity
+        let currentUser = localStorage.getItem('gh_comment_user');
+        let currentColor = localStorage.getItem('gh_comment_color');
         if (!currentUser) {
             currentUser = 'User_' + Math.random().toString(36).substring(2,6).toUpperCase() + Math.floor(Math.random()*900+100);
             const colors = ['#f59e0b','#10b981','#3b82f6','#8b5cf6','#ef4444','#ec4899','#14b8a6'];
             currentColor = colors[Math.floor(Math.random() * colors.length)];
-            localStorage.setItem('my_random_user', currentUser);
-            localStorage.setItem('my_random_color', currentColor);
+            localStorage.setItem('gh_comment_user', currentUser);
+            localStorage.setItem('gh_comment_color', currentColor);
         }
 
-        const API_BASE = 'https://app-store-rnvz.onrender.com';
-
-        async function loadComments() {
+        async function fetchComments() {
             try {
-                const res = await fetch(API_BASE + '/api/comments');
-                if (!res.ok) throw new Error('Failed to fetch');
-                const data = await res.json();
-                renderComments(data);
-            } catch(err) {
-                console.error('Error loading comments:', err);
-                document.getElementById('comments-container').innerHTML =
-                    '<p style="color: var(--text-muted);">⚠️ Unable to load comments. Please try again later.</p>';
+                const response = await fetch(API_BASE, {
+                    headers: {
+                        Authorization: `token ${GITHUB_TOKEN}`,
+                        Accept: 'application/vnd.github.v3+json'
+                    }
+                });
+                if (response.status === 404) return []; // file not exist
+                if (!response.ok) throw new Error('Failed to fetch');
+                const data = await response.json();
+                const content = atob(data.content);
+                return JSON.parse(content);
+            } catch (err) {
+                console.error(err);
+                return null;
+            }
+        }
+
+        async function saveComments(comments) {
+            // Get current SHA
+            let sha = null;
+            try {
+                const res = await fetch(API_BASE, {
+                    headers: { Authorization: `token ${GITHUB_TOKEN}`, Accept: 'application/vnd.github.v3+json' }
+                });
+                if (res.ok) {
+                    const data = await res.json();
+                    sha = data.sha;
+                }
+            } catch(e) {}
+
+            const body = {
+                message: 'Update comments.json',
+                content: btoa(unescape(encodeURIComponent(JSON.stringify(comments, null, 2)))),
+                sha: sha
+            };
+
+            const response = await fetch(API_BASE, {
+                method: 'PUT',
+                headers: {
+                    Authorization: `token ${GITHUB_TOKEN}`,
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(body)
+            });
+            if (!response.ok) {
+                const err = await response.json();
+                throw new Error(err.message || 'Save failed');
             }
         }
 
@@ -661,8 +530,7 @@
             }
             comments.slice().reverse().forEach(comment => {
                 const initial = comment.name.replace('User_','').charAt(0) || 'U';
-                let html = `
-                <div class="comment-item">
+                let html = `<div class="comment-item">
                     <div class="avatar" style="background-color: ${comment.color}">${initial}</div>
                     <div class="comment-content">
                         <p class="comment-name">${comment.name}</p>
@@ -700,27 +568,68 @@
             const inputField = parentId ? document.getElementById(`reply-input-${parentId}`) : document.getElementById('main-comment');
             const text = inputField.value.trim();
             if (!text) return;
-            const payload = { name: currentUser, color: currentColor, text: text };
-            if (parentId) payload.parentId = parentId;
-            try {
-                const res = await fetch(API_BASE + '/api/comments', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(payload)
-                });
-                const data = await res.json();
-                if (data.success) {
-                    inputField.value = '';
-                    loadComments();
-                } else {
-                    alert('Error: ' + (data.error || 'Unknown error'));
+
+            const comments = await fetchComments();
+            if (!comments) {
+                alert('Failed to load comments. Please try again.');
+                return;
+            }
+
+            const newComment = {
+                id: Date.now(),
+                name: currentUser,
+                color: currentColor,
+                text: text,
+                replies: [],
+                created: new Date().toISOString()
+            };
+
+            if (parentId) {
+                const findAndAddReply = (list) => {
+                    for (let c of list) {
+                        if (c.id === parentId) {
+                            c.replies = c.replies || [];
+                            c.replies.push({
+                                id: Date.now(),
+                                name: currentUser,
+                                color: currentColor,
+                                text: text,
+                                created: new Date().toISOString()
+                            });
+                            return true;
+                        }
+                        if (c.replies) {
+                            if (findAndAddReply(c.replies)) return true;
+                        }
+                    }
+                    return false;
+                };
+                if (!findAndAddReply(comments)) {
+                    alert('Parent comment not found');
+                    return;
                 }
+            } else {
+                comments.push(newComment);
+            }
+
+            try {
+                await saveComments(comments);
+                inputField.value = '';
+                renderComments(comments);
             } catch(err) {
-                alert('Network error – please try again.');
+                alert('Error saving comment: ' + err.message);
             }
         }
 
-        loadComments();
+        // Load comments on startup
+        (async () => {
+            const comments = await fetchComments();
+            if (comments) renderComments(comments);
+            else {
+                document.getElementById('comments-container').innerHTML =
+                    '<p style="color: var(--text-muted);">⚠️ Unable to load comments. Please check your token.</p>';
+            }
+        })();
     </script>
 </body>
 </html>
