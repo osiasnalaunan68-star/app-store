@@ -16,6 +16,7 @@
             --accent-blue: #3b82f6;
             --accent-purple: #8b5cf6;
             --accent-warning: #f59e0b;
+            --accent-ios: #007AFF;
         }
         body {
             background-color: var(--bg-color);
@@ -40,19 +41,25 @@
         }
         .tab-btn {
             flex: 1;
-            padding: 12px;
+            padding: 12px 6px;
             background: transparent;
             border: none;
             color: var(--text-muted);
             font-weight: 600;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             cursor: pointer;
             transition: 0.2s;
+            white-space: nowrap;
         }
         .tab-btn.active {
             background-color: rgba(59, 130, 246, 0.15);
             color: var(--accent-blue);
             border-bottom: 3px solid var(--accent-blue);
+        }
+        .tab-btn.ios-btn.active {
+            background-color: rgba(0, 122, 255, 0.15);
+            color: var(--accent-ios);
+            border-bottom-color: var(--accent-ios);
         }
         .tab-content {
             display: none;
@@ -111,7 +118,7 @@
         }
         .app-icon img { width: 100%; height: 100%; object-fit: cover; }
         .app-title { margin: 0 0 4px 0; font-size: 1.1rem; font-weight: 700; }
-        .badges { display: flex; gap: 6px; }
+        .badges { display: flex; gap: 6px; flex-wrap: wrap; }
         .badge {
             padding: 3px 8px;
             border-radius: 6px;
@@ -122,6 +129,7 @@
             gap: 4px;
         }
         .badge-apk { background: rgba(16,185,129,0.15); color: var(--accent-green); }
+        .badge-ios { background: rgba(0,122,255,0.15); color: var(--accent-ios); }
         .badge-ver { background: rgba(59,130,246,0.15); color: var(--accent-blue); }
         .badge-size { background: rgba(148,163,184,0.15); color: var(--text-muted); }
         .rating-header { margin: 0 0 10px 0; font-size: 1rem; font-weight: 600; }
@@ -160,6 +168,21 @@
         .btn-download:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(16,185,129,0.3); }
         .btn-main-text { font-weight: 700; font-size: 1rem; }
         .btn-sub-text { font-size: 0.7rem; opacity: 0.9; }
+
+        .btn-web {
+            background: linear-gradient(135deg, #007AFF, #0051a8);
+            color: white;
+            padding: 12px;
+            border-radius: 10px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-weight: 600;
+            margin-top: 12px;
+        }
+        .btn-web:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(0,122,255,0.3); }
 
         /* Warning Card */
         .warning-card {
@@ -231,6 +254,11 @@
         .stat-row:last-child { margin-bottom: 0; }
         .stat-label { display: flex; align-items: center; gap: 6px; font-size: 0.65rem; color: var(--text-muted); text-transform: uppercase; margin-bottom: 4px; }
         .stat-value { font-size: 0.9rem; font-weight: 600; margin: 0; }
+
+        /* iOS specific */
+        .ios-step { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; }
+        .ios-step-num { background: var(--accent-ios); color: white; border-radius: 50%; width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.8rem; flex-shrink: 0; margin-top: 2px; }
+        .ios-step-text { font-size: 0.9rem; color: var(--text-main); }
 
         /* Comments */
         .comment-box { display: flex; flex-direction: column; gap: 10px; margin-top: 15px; }
@@ -350,6 +378,7 @@
 
     <div class="nav-tabs">
         <button class="tab-btn active" onclick="switchTab('app')"><i class="fa-brands fa-android"></i> APK App</button>
+        <button class="tab-btn ios-btn" onclick="switchTab('ios')"><i class="fa-brands fa-apple"></i> iOS</button>
         <button class="tab-btn" onclick="switchTab('website')"><i class="fa-solid fa-globe"></i> Website</button>
     </div>
 
@@ -378,7 +407,6 @@
             </a>
         </div>
 
-        <!-- Warning + Video -->
         <div class="card warning-card">
             <div class="warning-header">
                 <i class="fa-solid fa-triangle-exclamation"></i>
@@ -392,7 +420,6 @@
             </button>
         </div>
 
-        <!-- Ratings -->
         <div class="card">
             <h2 class="rating-header">Ratings and reviews</h2>
             <div class="rating-flex">
@@ -413,7 +440,6 @@
             </div>
         </div>
 
-        <!-- Gallery -->
         <div class="card">
             <div class="gallery-title"><i class="fa-regular fa-images"></i> Preview Gallery</div>
             <div class="gallery-scroll-container">
@@ -423,7 +449,6 @@
             </div>
         </div>
 
-        <!-- Stats -->
         <div class="card">
             <div class="stats-header">
                 <div class="stats-icon"><i class="fa-solid fa-chart-line"></i></div>
@@ -439,7 +464,6 @@
             </div>
         </div>
 
-        <!-- Comments -->
         <div class="card">
             <h2 class="rating-header">User Comments & Suggestions</h2>
             <div class="comment-box">
@@ -447,6 +471,62 @@
                 <button class="btn-post" onclick="postComment(null)">Post Comment</button>
             </div>
             <div class="comment-list" id="comments-container"></div>
+        </div>
+    </div>
+
+    <!-- iOS TAB -->
+    <div id="tab-ios" class="tab-content">
+        <div class="card">
+            <div class="app-header">
+                <div class="app-icon">
+                    <img src="images/app-logo.png" alt="Customs Tech Logo">
+                </div>
+                <div>
+                    <h1 class="app-title">RA 10863 CMTA</h1>
+                    <div class="badges">
+                        <span class="badge badge-ios"><i class="fa-brands fa-apple"></i> iOS</span>
+                        <span class="badge badge-ver"><i class="fa-solid fa-code-branch"></i> Web App</span>
+                        <span class="badge badge-size"><i class="fa-solid fa-wifi"></i> Offline-ready</span>
+                    </div>
+                </div>
+            </div>
+            <p style="color: var(--text-muted); font-size:0.9rem;">Walang native iOS app, pero kayang-kaya ng iPhone at iPad na gamitin ang web version bilang full-screen app — kahit offline!</p>
+            <a href="https://osiasnalaunan68-star.github.io/osias--clone/" target="_blank" class="btn-web">
+                <i class="fa-solid fa-globe"></i> Open Web App
+            </a>
+        </div>
+
+        <div class="card">
+            <h2 class="web-card-title" style="color: var(--accent-ios);"><i class="fa-solid fa-square-plus"></i> How to Add to Home Screen</h2>
+            <div class="ios-step">
+                <div class="ios-step-num">1</div>
+                <div class="ios-step-text">Open <strong>Safari</strong> and go to the website link above.</div>
+            </div>
+            <div class="ios-step">
+                <div class="ios-step-num">2</div>
+                <div class="ios-step-text">Tap the <strong>Share button</strong> <span style="background:#f1f5f9; color:#1e293b; padding:2px 6px; border-radius:4px;">⬆️</span> at the bottom of the screen.</div>
+            </div>
+            <div class="ios-step">
+                <div class="ios-step-num">3</div>
+                <div class="ios-step-text">Scroll and select <strong>"Add to Home Screen"</strong>.</div>
+            </div>
+            <div class="ios-step">
+                <div class="ios-step-num">4</div>
+                <div class="ios-step-text">Rename if you like, then tap <strong>Add</strong>. The app icon will appear on your Home Screen.</div>
+            </div>
+            <p style="font-size:0.8rem; color: var(--text-muted); margin-top:16px;">Pagkatapos, buksan lang ang bagong icon — may full offline access ka na sa RA 10863, tulad ng tunay na app!</p>
+        </div>
+
+        <div class="card">
+            <h2 class="rating-header">Why use the Web App?</h2>
+            <div class="stat-row">
+                <div class="stat-label"><i class="fa-solid fa-bolt"></i> Fast</div>
+                <p class="stat-value">No download needed – works instantly after adding to Home Screen.</p>
+            </div>
+            <div class="stat-row">
+                <div class="stat-label"><i class="fa-solid fa-cloud-arrow-down"></i> Offline</div>
+                <p class="stat-value">All laws cached. Read, highlight, and search even without internet.</p>
+            </div>
         </div>
     </div>
 
@@ -463,7 +543,6 @@
             </div>
         </div>
 
-        <!-- Step-by-Step Photos -->
         <div class="card">
             <h2 class="web-card-title"><i class="fa-solid fa-images"></i> How to Download & Install</h2>
             <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0;">Step-by-step guide for installing the APK on your Android device.</p>
@@ -548,7 +627,6 @@
         };
 
         // ======= SHARED COMMENTS (BACKEND) =======
-        // Identity
         let currentUser = localStorage.getItem('my_random_user');
         let currentColor = localStorage.getItem('my_random_color');
         if (!currentUser) {
@@ -559,7 +637,7 @@
             localStorage.setItem('my_random_color', currentColor);
         }
 
-        const API_BASE = 'https://app-store-rnvz.onrender.com';  // <-- iyong backend URL
+        const API_BASE = 'https://app-store-rnvz.onrender.com';
 
         async function loadComments() {
             try {
@@ -642,7 +720,6 @@
             }
         }
 
-        // Load comments on page load
         loadComments();
     </script>
 </body>
